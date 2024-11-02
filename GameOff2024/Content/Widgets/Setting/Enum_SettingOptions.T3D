@@ -1,0 +1,5 @@
+Begin Object Class=/Script/Engine.UserDefinedEnum Name="Enum_SettingOptions" ExportPath="/Script/Engine.UserDefinedEnum'/Game/Users/WJ/Nightmares/UserWidgets/Setting/Enum_SettingOptions.Enum_SettingOptions'"
+   UniqueNameIndex=5
+   EnumDescription=NSLOCTEXT("[08E4581FDC8D035068FAA96F6A856464]", "7D50E79C41CBF23565C7ECBC22A3261D", "The states of the game setting menu")
+   DisplayNameMap=(("NewEnumerator0", NSLOCTEXT("[08E4581FDC8D035068FAA96F6A856464]", "8340AE3B4A3734F9800B5E8C33E00CC6", "Graphcs")),("NewEnumerator1", NSLOCTEXT("[08E4581FDC8D035068FAA96F6A856464]", "C1DAE3EE4AA288EA2BDC9EBC3054146D", "Display")),("NewEnumerator2", NSLOCTEXT("[08E4581FDC8D035068FAA96F6A856464]", "68E236684BB7F9D398912198065F4088", "Audio")),("NewEnumerator3", NSLOCTEXT("[08E4581FDC8D035068FAA96F6A856464]", "5ED8518546C3AC4AF5008183E15D1877", "GamePlay")))
+End Object
