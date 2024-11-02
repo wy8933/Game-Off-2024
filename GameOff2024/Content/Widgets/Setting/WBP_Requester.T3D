@@ -1,0 +1,724 @@
+Begin Object Class=/Script/UMGEditor.WidgetBlueprint Name="WBP_Requester" ExportPath="/Script/UMGEditor.WidgetBlueprint'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester'"
+   Begin Object Class=/Script/UMG.WidgetTree Name="WidgetTree" Archetype="/Script/UMG.WidgetTree'/Script/UMGEditor.Default__WidgetBlueprint:WidgetTree'" ExportPath="/Script/UMG.WidgetTree'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree'"
+      Begin Object Class=/Script/UMG.Border Name="Border_117" ExportPath="/Script/UMG.Border'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.Border_117'"
+         Begin Object Class=/Script/UMG.BorderSlot Name="BorderSlot_0" ExportPath="/Script/UMG.BorderSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.Border_117.BorderSlot_0'"
+         End Object
+      End Object
+      Begin Object Class=/Script/UMG.Border Name="Border_149" ExportPath="/Script/UMG.Border'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.Border_149'"
+         Begin Object Class=/Script/UMG.BorderSlot Name="BorderSlot_1" ExportPath="/Script/UMG.BorderSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.Border_149.BorderSlot_1'"
+         End Object
+      End Object
+      Begin Object Class=/Script/UMG.CanvasPanel Name="CanvasPanel_48" ExportPath="/Script/UMG.CanvasPanel'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.CanvasPanel_48'"
+         Begin Object Class=/Script/UMG.CanvasPanelSlot Name="CanvasPanelSlot_0" ExportPath="/Script/UMG.CanvasPanelSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.CanvasPanel_48.CanvasPanelSlot_0'"
+         End Object
+      End Object
+      Begin Object Class=/Script/UMG.VerticalBox Name="VerticalBox_45" ExportPath="/Script/UMG.VerticalBox'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.VerticalBox_45'"
+         Begin Object Class=/Script/UMG.VerticalBoxSlot Name="VerticalBoxSlot_1" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.VerticalBox_45.VerticalBoxSlot_1'"
+         End Object
+         Begin Object Class=/Script/UMG.VerticalBoxSlot Name="VerticalBoxSlot_0" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.VerticalBox_45.VerticalBoxSlot_0'"
+         End Object
+      End Object
+      Begin Object Class=/Script/UMG.Button Name="btn_No" ExportPath="/Script/UMG.Button'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.btn_No'"
+         Begin Object Class=/Script/UMG.ButtonSlot Name="ButtonSlot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.btn_No.ButtonSlot_0'"
+         End Object
+      End Object
+      Begin Object Class=/Script/UMG.HorizontalBox Name="HorizontalBox_62" ExportPath="/Script/UMG.HorizontalBox'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.HorizontalBox_62'"
+         Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="HorizontalBoxSlot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.HorizontalBox_62.HorizontalBoxSlot_1'"
+         End Object
+         Begin Object Class=/Script/UMG.HorizontalBoxSlot Name="HorizontalBoxSlot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.HorizontalBox_62.HorizontalBoxSlot_0'"
+         End Object
+      End Object
+      Begin Object Class=/Script/UMG.Button Name="btn_Yes" ExportPath="/Script/UMG.Button'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.btn_Yes'"
+         Begin Object Class=/Script/UMG.ButtonSlot Name="ButtonSlot_1" ExportPath="/Script/UMG.ButtonSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.btn_Yes.ButtonSlot_1'"
+         End Object
+      End Object
+      Begin Object Class=/Script/UMG.TextBlock Name="TextBlock_193" ExportPath="/Script/UMG.TextBlock'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.TextBlock_193'"
+      End Object
+      Begin Object Class=/Script/UMG.TextBlock Name="TextBlock_137" ExportPath="/Script/UMG.TextBlock'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.TextBlock_137'"
+      End Object
+      Begin Object Class=/Script/UMG.TextBlock Name="Description" ExportPath="/Script/UMG.TextBlock'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.Description'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="ClearDispatchers" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:ClearDispatchers'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:ClearDispatchers.K2Node_FunctionEntry_0'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="DispatcherNo" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:DispatcherNo'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:DispatcherNo.K2Node_FunctionEntry_0'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="DispatcherYes" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:DispatcherYes'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:DispatcherYes.K2Node_FunctionEntry_0'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="EventGraph" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_CallDelegate Name="K2Node_CallDelegate_0" ExportPath="/Script/BlueprintGraph.K2Node_CallDelegate'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CallDelegate_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_CallDelegate Name="K2Node_CallDelegate_1" ExportPath="/Script/BlueprintGraph.K2Node_CallDelegate'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CallDelegate_1'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_CallFunction Name="K2Node_CallFunction_0" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CallFunction_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_CallFunction Name="K2Node_CallFunction_1" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CallFunction_1'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_CallFunction Name="K2Node_CallFunction_2" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CallFunction_2'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_CallFunction Name="K2Node_CallFunction_3" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CallFunction_3'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_ComponentBoundEvent Name="K2Node_ComponentBoundEvent_0" ExportPath="/Script/BlueprintGraph.K2Node_ComponentBoundEvent'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_ComponentBoundEvent_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_ComponentBoundEvent Name="K2Node_ComponentBoundEvent_1" ExportPath="/Script/BlueprintGraph.K2Node_ComponentBoundEvent'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_ComponentBoundEvent_1'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_CustomEvent_0" ExportPath="/Script/BlueprintGraph.K2Node_CustomEvent'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CustomEvent_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_Event Name="K2Node_Event_0" ExportPath="/Script/BlueprintGraph.K2Node_Event'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_Event_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_Event Name="K2Node_Event_1" ExportPath="/Script/BlueprintGraph.K2Node_Event'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_Event_1'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_Event Name="K2Node_Event_2" ExportPath="/Script/BlueprintGraph.K2Node_Event'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_Event_2'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_VariableGet Name="K2Node_VariableGet_2" ExportPath="/Script/BlueprintGraph.K2Node_VariableGet'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_VariableGet_2'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="GetRequesterWidget" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_ClearDelegate Name="K2Node_ClearDelegate_0" ExportPath="/Script/BlueprintGraph.K2Node_ClearDelegate'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_ClearDelegate_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_ClearDelegate Name="K2Node_ClearDelegate_1" ExportPath="/Script/BlueprintGraph.K2Node_ClearDelegate'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_ClearDelegate_1'"
+      End Object
+      Begin Object Class=/Script/UMGEditor.K2Node_CreateWidget Name="K2Node_CreateWidget_0" ExportPath="/Script/UMGEditor.K2Node_CreateWidget'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_CreateWidget_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_FunctionEntry_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionResult Name="K2Node_FunctionResult_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_FunctionResult_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_MacroInstance Name="K2Node_MacroInstance_0" ExportPath="/Script/BlueprintGraph.K2Node_MacroInstance'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_MacroInstance_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_VariableGet Name="K2Node_VariableGet_0" ExportPath="/Script/BlueprintGraph.K2Node_VariableGet'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_VariableGet_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_VariableGet Name="K2Node_VariableGet_1" ExportPath="/Script/BlueprintGraph.K2Node_VariableGet'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_VariableGet_1'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_VariableSet Name="K2Node_VariableSet_2" ExportPath="/Script/BlueprintGraph.K2Node_VariableSet'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_VariableSet_2'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="HasUnAppliedChanges" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:HasUnAppliedChanges'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:HasUnAppliedChanges.K2Node_FunctionEntry_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionResult Name="K2Node_FunctionResult_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:HasUnAppliedChanges.K2Node_FunctionResult_0'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="Show Requester" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Show Requester'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Show Requester.K2Node_FunctionEntry_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_SetVariableOnPersistentFrame Name="K2Node_SetVariableOnPersistentFrame_0" ExportPath="/Script/BlueprintGraph.K2Node_SetVariableOnPersistentFrame'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Show Requester.K2Node_SetVariableOnPersistentFrame_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_CallFunction Name="K2Node_CallFunction_0" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Show Requester.K2Node_CallFunction_0'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="BndEvt__WBP_Requester_btn_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:BndEvt__WBP_Requester_btn_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:BndEvt__WBP_Requester_btn_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature.K2Node_FunctionEntry_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_CallFunction Name="K2Node_CallFunction_0" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:BndEvt__WBP_Requester_btn_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature.K2Node_CallFunction_0'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="BndEvt__WBP_Requester_btn_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:BndEvt__WBP_Requester_btn_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:BndEvt__WBP_Requester_btn_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature.K2Node_FunctionEntry_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_CallFunction Name="K2Node_CallFunction_0" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:BndEvt__WBP_Requester_btn_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature.K2Node_CallFunction_0'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="Reset" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Reset'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Reset.K2Node_FunctionEntry_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_CallFunction Name="K2Node_CallFunction_0" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Reset.K2Node_CallFunction_0'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="Apply" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Apply'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Apply.K2Node_FunctionEntry_0'"
+      End Object
+      Begin Object Class=/Script/BlueprintGraph.K2Node_CallFunction Name="K2Node_CallFunction_0" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Apply.K2Node_CallFunction_0'"
+      End Object
+   End Object
+   Begin Object Name="WidgetTree" ExportPath="/Script/UMG.WidgetTree'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree'"
+      Begin Object Name="Border_117" ExportPath="/Script/UMG.Border'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.Border_117'"
+         Begin Object Name="BorderSlot_0" ExportPath="/Script/UMG.BorderSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.Border_117.BorderSlot_0'"
+            Parent="/Script/UMG.Border'WBP_Requester:WidgetTree.Border_117'"
+            Content="/Script/UMG.CanvasPanel'WBP_Requester:WidgetTree.CanvasPanel_48'"
+         End Object
+         BrushColor=(R=0.000000,G=0.000000,B=0.000000,A=0.500000)
+         Slots(0)="/Script/UMG.BorderSlot'BorderSlot_0'"
+         bExpandedInDesigner=True
+      End Object
+      Begin Object Name="Border_149" ExportPath="/Script/UMG.Border'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.Border_149'"
+         Begin Object Name="BorderSlot_1" ExportPath="/Script/UMG.BorderSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.Border_149.BorderSlot_1'"
+            Padding=(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000)
+            HorizontalAlignment=HAlign_Center
+            VerticalAlignment=VAlign_Center
+            Parent="/Script/UMG.Border'WBP_Requester:WidgetTree.Border_149'"
+            Content="/Script/UMG.VerticalBox'WBP_Requester:WidgetTree.VerticalBox_45'"
+         End Object
+         HorizontalAlignment=HAlign_Center
+         VerticalAlignment=VAlign_Center
+         Padding=(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000)
+         BrushColor=(R=0.000000,G=0.000000,B=0.000000,A=0.750000)
+         Slots(0)="/Script/UMG.BorderSlot'BorderSlot_1'"
+         Slot="/Script/UMG.CanvasPanelSlot'WBP_Requester:WidgetTree.CanvasPanel_48.CanvasPanelSlot_0'"
+         bExpandedInDesigner=True
+      End Object
+      Begin Object Name="CanvasPanel_48" ExportPath="/Script/UMG.CanvasPanel'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.CanvasPanel_48'"
+         Begin Object Name="CanvasPanelSlot_0" ExportPath="/Script/UMG.CanvasPanelSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.CanvasPanel_48.CanvasPanelSlot_0'"
+            LayoutData=(Offsets=(Right=0.000000,Bottom=0.000000),Anchors=(Minimum=(X=0.250000,Y=0.350000),Maximum=(X=0.750000,Y=0.650000)))
+            Parent="/Script/UMG.CanvasPanel'WBP_Requester:WidgetTree.CanvasPanel_48'"
+            Content="/Script/UMG.Border'WBP_Requester:WidgetTree.Border_149'"
+         End Object
+         Slots(0)="/Script/UMG.CanvasPanelSlot'CanvasPanelSlot_0'"
+         Slot="/Script/UMG.BorderSlot'WBP_Requester:WidgetTree.Border_117.BorderSlot_0'"
+         bExpandedInDesigner=True
+      End Object
+      Begin Object Name="VerticalBox_45" ExportPath="/Script/UMG.VerticalBox'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.VerticalBox_45'"
+         Begin Object Name="VerticalBoxSlot_1" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.VerticalBox_45.VerticalBoxSlot_1'"
+            Padding=(Left=15.000000,Right=15.000000)
+            Parent="/Script/UMG.VerticalBox'WBP_Requester:WidgetTree.VerticalBox_45'"
+            Content="/Script/UMG.HorizontalBox'WBP_Requester:WidgetTree.HorizontalBox_62'"
+         End Object
+         Begin Object Name="VerticalBoxSlot_0" ExportPath="/Script/UMG.VerticalBoxSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.VerticalBox_45.VerticalBoxSlot_0'"
+            Padding=(Left=50.000000,Top=15.000000,Right=50.000000,Bottom=15.000000)
+            VerticalAlignment=VAlign_Center
+            Parent="/Script/UMG.VerticalBox'WBP_Requester:WidgetTree.VerticalBox_45'"
+            Content="/Script/UMG.TextBlock'WBP_Requester:WidgetTree.Description'"
+         End Object
+         Slots(0)="/Script/UMG.VerticalBoxSlot'VerticalBoxSlot_0'"
+         Slots(1)="/Script/UMG.VerticalBoxSlot'VerticalBoxSlot_1'"
+         Slot="/Script/UMG.BorderSlot'WBP_Requester:WidgetTree.Border_149.BorderSlot_1'"
+         bExpandedInDesigner=True
+      End Object
+      Begin Object Name="btn_No" ExportPath="/Script/UMG.Button'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.btn_No'"
+         Begin Object Name="ButtonSlot_0" ExportPath="/Script/UMG.ButtonSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.btn_No.ButtonSlot_0'"
+            Padding=(Left=10.000000,Right=10.000000)
+            Parent="/Script/UMG.Button'WBP_Requester:WidgetTree.btn_No'"
+            Content="/Script/UMG.TextBlock'WBP_Requester:WidgetTree.TextBlock_193'"
+         End Object
+         Slots(0)="/Script/UMG.ButtonSlot'ButtonSlot_0'"
+         Slot="/Script/UMG.HorizontalBoxSlot'WBP_Requester:WidgetTree.HorizontalBox_62.HorizontalBoxSlot_1'"
+         bExpandedInDesigner=True
+         DisplayLabel="btn_No"
+      End Object
+      Begin Object Name="HorizontalBox_62" ExportPath="/Script/UMG.HorizontalBox'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.HorizontalBox_62'"
+         Begin Object Name="HorizontalBoxSlot_1" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.HorizontalBox_62.HorizontalBoxSlot_1'"
+            Size=(SizeRule=Fill)
+            Padding=(Left=50.000000,Top=15.000000,Right=50.000000,Bottom=15.000000)
+            HorizontalAlignment=HAlign_Center
+            VerticalAlignment=VAlign_Center
+            Parent="/Script/UMG.HorizontalBox'WBP_Requester:WidgetTree.HorizontalBox_62'"
+            Content="/Script/UMG.Button'WBP_Requester:WidgetTree.btn_No'"
+         End Object
+         Begin Object Name="HorizontalBoxSlot_0" ExportPath="/Script/UMG.HorizontalBoxSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.HorizontalBox_62.HorizontalBoxSlot_0'"
+            Size=(SizeRule=Fill)
+            Padding=(Left=50.000000,Top=15.000000,Right=50.000000,Bottom=15.000000)
+            Parent="/Script/UMG.HorizontalBox'WBP_Requester:WidgetTree.HorizontalBox_62'"
+            Content="/Script/UMG.Button'WBP_Requester:WidgetTree.btn_Yes'"
+         End Object
+         Slots(0)="/Script/UMG.HorizontalBoxSlot'HorizontalBoxSlot_0'"
+         Slots(1)="/Script/UMG.HorizontalBoxSlot'HorizontalBoxSlot_1'"
+         Slot="/Script/UMG.VerticalBoxSlot'WBP_Requester:WidgetTree.VerticalBox_45.VerticalBoxSlot_1'"
+         bExpandedInDesigner=True
+      End Object
+      Begin Object Name="btn_Yes" ExportPath="/Script/UMG.Button'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.btn_Yes'"
+         Begin Object Name="ButtonSlot_1" ExportPath="/Script/UMG.ButtonSlot'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.btn_Yes.ButtonSlot_1'"
+            Padding=(Left=10.000000,Right=10.000000)
+            Parent="/Script/UMG.Button'WBP_Requester:WidgetTree.btn_Yes'"
+            Content="/Script/UMG.TextBlock'WBP_Requester:WidgetTree.TextBlock_137'"
+         End Object
+         Slots(0)="/Script/UMG.ButtonSlot'ButtonSlot_1'"
+         Slot="/Script/UMG.HorizontalBoxSlot'WBP_Requester:WidgetTree.HorizontalBox_62.HorizontalBoxSlot_0'"
+         bExpandedInDesigner=True
+         DisplayLabel="btn_Yes"
+      End Object
+      Begin Object Name="TextBlock_193" ExportPath="/Script/UMG.TextBlock'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.TextBlock_193'"
+         Text=NSLOCTEXT("", "5D37AA424273711D6C58559523639449", "No")
+         Justification=Center
+         Slot="/Script/UMG.ButtonSlot'WBP_Requester:WidgetTree.btn_No.ButtonSlot_0'"
+      End Object
+      Begin Object Name="TextBlock_137" ExportPath="/Script/UMG.TextBlock'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.TextBlock_137'"
+         Text=NSLOCTEXT("", "646F7378407BCDA75DEDAF84FA97288E", "Yes")
+         Justification=Center
+         Slot="/Script/UMG.ButtonSlot'WBP_Requester:WidgetTree.btn_Yes.ButtonSlot_1'"
+      End Object
+      Begin Object Name="Description" ExportPath="/Script/UMG.TextBlock'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:WidgetTree.Description'"
+         Text=NSLOCTEXT("", "465223FA41A1295BA81BB4BF0CB4CA35", "Are You Sure?")
+         Font=(Size=32.000000)
+         Justification=Center
+         Slot="/Script/UMG.VerticalBoxSlot'WBP_Requester:WidgetTree.VerticalBox_45.VerticalBoxSlot_0'"
+         bIsVariable=True
+         DisplayLabel="Description"
+      End Object
+      RootWidget="/Script/UMG.Border'Border_117'"
+   End Object
+   Begin Object Name="ClearDispatchers" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:ClearDispatchers'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:ClearDispatchers.K2Node_FunctionEntry_0'"
+         ExtraFlags=201457664
+         FunctionReference=(MemberName="ClearDispatchers")
+         bIsEditable=True
+         NodeGuid=A868AB81404A3B1C02292ABDB02A2F83
+         CustomProperties Pin (PinId=2E9250BB4803BFC49C5F49A323F3E7B9,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/UMGEditor.WidgetGraphSchema'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      GraphGuid=4F7779F24CECF4F4DB6A87B760D036D7
+   End Object
+   Begin Object Name="DispatcherNo" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:DispatcherNo'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:DispatcherNo.K2Node_FunctionEntry_0'"
+         ExtraFlags=201457664
+         FunctionReference=(MemberName="DispatcherNo")
+         bIsEditable=True
+         NodeGuid=37F90480482DC76A768D39AB5996D61A
+         CustomProperties Pin (PinId=C84EF3B14E2A1AB1210133BF2179C2D0,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      bEditable=False
+      GraphGuid=6344570A460184A2E07A58A4126D236F
+   End Object
+   Begin Object Name="DispatcherYes" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:DispatcherYes'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:DispatcherYes.K2Node_FunctionEntry_0'"
+         ExtraFlags=201457664
+         FunctionReference=(MemberName="DispatcherYes")
+         bIsEditable=True
+         NodeGuid=E85E6CB94568ED3336C1A58739827D3D
+         CustomProperties Pin (PinId=F3B95A7C433EDBA5403FBCB720F7AF3B,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      bEditable=False
+      GraphGuid=C3BBF6184ED951E968A007AE2CDEAF65
+   End Object
+   Begin Object Name="EventGraph" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph'"
+      Begin Object Name="K2Node_CallDelegate_0" ExportPath="/Script/BlueprintGraph.K2Node_CallDelegate'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CallDelegate_0'"
+         DelegateReference=(MemberName="DispatcherYes",MemberGuid=FBBE78C5450BB460187165AFC00B1F48,bSelfContext=True)
+         NodePosX=912
+         NodePosY=688
+         NodeGuid=3DE795B74E0AD5A4D4D2009C6153BB91
+         CustomProperties Pin (PinId=C4536116414C86C07463B895727B6702,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_1 FE097E3E42A88475DD82A685ED71FBF8,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=6FEDA91E4701E62952256D81FB7108D9,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=34D16EAB4CE5DFF9B0BEF589A11A3F18,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "BaseMCDelegateSelfPinName", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_CallDelegate_1" ExportPath="/Script/BlueprintGraph.K2Node_CallDelegate'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CallDelegate_1'"
+         DelegateReference=(MemberName="DispatcherNo",MemberGuid=B143BA6140523F8F4E16EC9F295908D1,bSelfContext=True)
+         NodePosX=864
+         NodePosY=928
+         NodeGuid=9E054EC245915DACC00C6597FA5685E1
+         CustomProperties Pin (PinId=B4FC27934CA9BB1D876D5194EB4459F2,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_0 2CD7F700476793F39323718B68C99F44,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=44830EA0402347D0104264B06A6288AD,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=F2B50A3C4C738F82D1469B9F0880D062,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "BaseMCDelegateSelfPinName", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_CallFunction_0" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CallFunction_0'"
+         FunctionReference=(MemberName="RemoveFromParent",bSelfContext=True)
+         NodePosX=432
+         NodePosY=912
+         NodeGuid=32A649C742E0D27E7F9BB3BC12C5C592
+         CustomProperties Pin (PinId=C231DE21458579D459E34BA2865D1DC5,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_ComponentBoundEvent_1 42220C294FF058C94131BABEBF00B872,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=2CD7F700476793F39323718B68C99F44,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallDelegate_1 B4FC27934CA9BB1D876D5194EB4459F2,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=F2E09ACC4A5F0C920297A981B78AA515,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/CoreUObject.Class'/Script/UMG.Widget'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_CallFunction_1" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CallFunction_1'"
+         FunctionReference=(MemberName="RemoveFromParent",bSelfContext=True)
+         NodePosX=448
+         NodePosY=672
+         NodeGuid=9C846C424AE6405719EF9589A8C9BD2B
+         CustomProperties Pin (PinId=16D1699E47FB0A6D2B8CEE8F9788201C,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_ComponentBoundEvent_0 E92E4F7B4F7A37CFD6A04BA5D5EAC500,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=FE097E3E42A88475DD82A685ED71FBF8,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallDelegate_0 C4536116414C86C07463B895727B6702,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=45FD00F1408060E282AB578162E39432,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/CoreUObject.Class'/Script/UMG.Widget'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_CallFunction_2" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CallFunction_2'"
+         FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.TextBlock'",MemberName="SetText")
+         NodePosX=416
+         NodePosY=1216
+         NodeGuid=3F6F120948B45F03A5F090BED0687DA0
+         CustomProperties Pin (PinId=087491B945001AD07DDEE4B58C1E2A05,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CustomEvent_0 87A54FAE4D636E6525413FA3CB139C24,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=139E60154B77401E0F847B8598FE1A33,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_3 E566B3124691B3D8751464AA5EB5CC97,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=8AD65A004793FDC1BBF1B6B355C3D1F6,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/CoreUObject.Class'/Script/UMG.TextBlock'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_VariableGet_2 D3B684D14590060D8501008146C22AD0,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=195F9FD140C3D392306B5ABA990E7EF3,PinName="InText",PinType.PinCategory="text",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CustomEvent_0 21C9686D47873DCE5DB78FABA7623510,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_CallFunction_3" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CallFunction_3'"
+         FunctionReference=(MemberName="AddToViewport",bSelfContext=True)
+         NodePosX=784
+         NodePosY=1216
+         AdvancedPinDisplay=Hidden
+         NodeGuid=1D120851499E8CF699670C9D9243EB1F
+         CustomProperties Pin (PinId=E566B3124691B3D8751464AA5EB5CC97,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_2 139E60154B77401E0F847B8598FE1A33,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=A9AD52B44A5474FDECA7C9B3CBB86412,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=E5896B674EC24F54AE64088CB2C4D3D6,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/CoreUObject.Class'/Script/UMG.UserWidget'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=8EB8735F4E6446648225098A8D2F756A,PinName="ZOrder",PinType.PinCategory="int",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,DefaultValue="0",AutogeneratedDefaultValue="0",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=True,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_ComponentBoundEvent_0" ExportPath="/Script/BlueprintGraph.K2Node_ComponentBoundEvent'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_ComponentBoundEvent_0'"
+         DelegatePropertyName="OnClicked"
+         DelegateOwnerClass="/Script/CoreUObject.Class'/Script/UMG.Button'"
+         ComponentPropertyName="btn_Yes"
+         EventReference=(MemberParent="/Script/CoreUObject.Package'/Script/UMG'",MemberName="OnButtonClickedEvent__DelegateSignature")
+         bInternalEvent=True
+         CustomFunctionName="BndEvt__WBP_Requester_btn_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature"
+         NodePosY=672
+         NodeGuid=036AE012470816C8DEA2E1A5ABDC6796
+         CustomProperties Pin (PinId=658CAB504FDB7C73AA10678907BEFB94,PinName="OutputDelegate",Direction="EGPD_Output",PinType.PinCategory="delegate",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(MemberParent="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",MemberName="BndEvt__WBP_Requester_btn_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature"),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=E92E4F7B4F7A37CFD6A04BA5D5EAC500,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_1 16D1699E47FB0A6D2B8CEE8F9788201C,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_ComponentBoundEvent_1" ExportPath="/Script/BlueprintGraph.K2Node_ComponentBoundEvent'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_ComponentBoundEvent_1'"
+         DelegatePropertyName="OnClicked"
+         DelegateOwnerClass="/Script/CoreUObject.Class'/Script/UMG.Button'"
+         ComponentPropertyName="btn_No"
+         EventReference=(MemberParent="/Script/CoreUObject.Package'/Script/UMG'",MemberName="OnButtonClickedEvent__DelegateSignature")
+         bInternalEvent=True
+         CustomFunctionName="BndEvt__WBP_Requester_btn_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature"
+         NodePosY=928
+         NodeGuid=A4C6CE00453E57AE3D093D931BCC3FFB
+         CustomProperties Pin (PinId=FC1F7A174817462EADBD97AB7145FDCC,PinName="OutputDelegate",Direction="EGPD_Output",PinType.PinCategory="delegate",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(MemberParent="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",MemberName="BndEvt__WBP_Requester_btn_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature"),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=42220C294FF058C94131BABEBF00B872,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_0 C231DE21458579D459E34BA2865D1DC5,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_CustomEvent_0" ExportPath="/Script/BlueprintGraph.K2Node_CustomEvent'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_CustomEvent_0'"
+         CustomFunctionName="Show Requester"
+         NodePosY=1200
+         ErrorType=1
+         NodeGuid=E39CD3CA48C0BFB2BA9BCA94A00C66BA
+         CustomProperties Pin (PinId=788FE034438E02987558EC92EB26C3B7,PinName="OutputDelegate",Direction="EGPD_Output",PinType.PinCategory="delegate",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(MemberParent="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",MemberName="Show Requester",MemberGuid=E39CD3CA48C0BFB2BA9BCA94A00C66BA),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=87A54FAE4D636E6525413FA3CB139C24,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_2 087491B945001AD07DDEE4B58C1E2A05,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=21C9686D47873DCE5DB78FABA7623510,PinName="InText",Direction="EGPD_Output",PinType.PinCategory="text",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,AutogeneratedDefaultValue="NSLOCTEXT(\"[3850424D93B18331FC488A0961947F85]\", \"384354554E8D06B4C9B66E9A3B41852C\", \"Are You Sure?\")",DefaultTextValue=NSLOCTEXT("[3850424D93B18331FC488A0961947F85]", "384354554E8D06B4C9B66E9A3B41852C", "Are You Sure?"),LinkedTo=(K2Node_CallFunction_2 195F9FD140C3D392306B5ABA990E7EF3,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties UserDefinedPin (PinName="InText",PinType=(PinCategory="text"),DesiredPinDirection=EGPD_Output,PinDefaultValue="NSLOCTEXT(\"[3850424D93B18331FC488A0961947F85]\", \"384354554E8D06B4C9B66E9A3B41852C\", \"Are You Sure?\")")
+      End Object
+      Begin Object Name="K2Node_Event_0" ExportPath="/Script/BlueprintGraph.K2Node_Event'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_Event_0'"
+         EventReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.UserWidget'",MemberName="PreConstruct")
+         bOverrideFunction=True
+         EnabledState=Disabled
+         bCommentBubblePinned=True
+         bCommentBubbleVisible=True
+         NodeComment="This node is disabled and will not be called.\nDrag off pins to build functionality."
+         NodeGuid=73217B364FC0123F4E7279897565927A
+         CustomProperties Pin (PinId=756ABEA24E604190AF9C92B31A9377CE,PinName="OutputDelegate",Direction="EGPD_Output",PinType.PinCategory="delegate",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.UserWidget'",MemberName="PreConstruct"),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=C4E89B78413BCA2955CF3790E2502CBE,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=5286798D44041885CCDA94A29206B7A4,PinName="IsDesignTime",PinToolTip="Is Design Time\nBoolean",Direction="EGPD_Output",PinType.PinCategory="bool",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,DefaultValue="false",AutogeneratedDefaultValue="false",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_Event_1" ExportPath="/Script/BlueprintGraph.K2Node_Event'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_Event_1'"
+         EventReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.UserWidget'",MemberName="Construct")
+         bOverrideFunction=True
+         NodePosY=208
+         EnabledState=Disabled
+         bCommentBubblePinned=True
+         bCommentBubbleVisible=True
+         NodeComment="This node is disabled and will not be called.\nDrag off pins to build functionality."
+         NodeGuid=48F4C59F464FEFB067904297AE3E712F
+         CustomProperties Pin (PinId=A6F994E245A035C3395DCF8C475D93C6,PinName="OutputDelegate",Direction="EGPD_Output",PinType.PinCategory="delegate",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.UserWidget'",MemberName="Construct"),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=F142EFFB42803EE29E5E50874C1C68B8,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_Event_2" ExportPath="/Script/BlueprintGraph.K2Node_Event'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_Event_2'"
+         EventReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.UserWidget'",MemberName="Tick")
+         bOverrideFunction=True
+         NodePosY=416
+         EnabledState=Disabled
+         bCommentBubblePinned=True
+         bCommentBubbleVisible=True
+         NodeComment="This node is disabled and will not be called.\nDrag off pins to build functionality."
+         NodeGuid=1B9E0A7445914A5BECE0359AB4F0C518
+         CustomProperties Pin (PinId=A08903024D3DF52A14A6E39EDE555AD9,PinName="OutputDelegate",Direction="EGPD_Output",PinType.PinCategory="delegate",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(MemberParent="/Script/CoreUObject.Class'/Script/UMG.UserWidget'",MemberName="Tick"),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=0FC7AA01446E9DBD82627887A924DBB8,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=A637749A472334C4B78BC0A8B9247464,PinName="MyGeometry",PinToolTip="My Geometry\nGeometry Structure\n\nThe space allotted for this widget",Direction="EGPD_Output",PinType.PinCategory="struct",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/CoreUObject.ScriptStruct'/Script/SlateCore.Geometry'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=8C2485944AA6FF4DBAD46B9865D1662E,PinName="InDeltaTime",PinToolTip="In Delta Time\nFloat (single-precision)\n\nReal time passed since last tick",Direction="EGPD_Output",PinType.PinCategory="real",PinType.PinSubCategory="float",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,DefaultValue="0.0",AutogeneratedDefaultValue="0.0",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_VariableGet_2" ExportPath="/Script/BlueprintGraph.K2Node_VariableGet'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph.K2Node_VariableGet_2'"
+         VariableReference=(MemberName="Description",bSelfContext=True)
+         NodePosX=176
+         NodePosY=1344
+         NodeGuid=D7ED116F4CF2F03686FC3F85C20BFEAB
+         CustomProperties Pin (PinId=D3B684D14590060D8501008146C22AD0,PinName="Description",Direction="EGPD_Output",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/CoreUObject.Class'/Script/UMG.TextBlock'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_2 8AD65A004793FDC1BBF1B6B355C3D1F6,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=F9EB85CF4F3D89F0E785E98F06E30FB5,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=True,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_Event'K2Node_Event_0'"
+      Nodes(1)="/Script/BlueprintGraph.K2Node_Event'K2Node_Event_1'"
+      Nodes(2)="/Script/BlueprintGraph.K2Node_Event'K2Node_Event_2'"
+      Nodes(3)="/Script/BlueprintGraph.K2Node_ComponentBoundEvent'K2Node_ComponentBoundEvent_0'"
+      Nodes(4)="/Script/BlueprintGraph.K2Node_ComponentBoundEvent'K2Node_ComponentBoundEvent_1'"
+      Nodes(5)="/Script/BlueprintGraph.K2Node_CallFunction'K2Node_CallFunction_0'"
+      Nodes(6)="/Script/BlueprintGraph.K2Node_CallFunction'K2Node_CallFunction_1'"
+      Nodes(7)="/Script/BlueprintGraph.K2Node_CustomEvent'K2Node_CustomEvent_0'"
+      Nodes(8)="/Script/BlueprintGraph.K2Node_CallDelegate'K2Node_CallDelegate_0'"
+      Nodes(9)="/Script/BlueprintGraph.K2Node_CallDelegate'K2Node_CallDelegate_1'"
+      Nodes(10)="/Script/BlueprintGraph.K2Node_VariableGet'K2Node_VariableGet_2'"
+      Nodes(11)="/Script/BlueprintGraph.K2Node_CallFunction'K2Node_CallFunction_2'"
+      Nodes(12)="/Script/BlueprintGraph.K2Node_CallFunction'K2Node_CallFunction_3'"
+      bAllowDeletion=False
+      GraphGuid=684AB96B420C1F99F13D5EA133CB0D77
+   End Object
+   Begin Object Name="GetRequesterWidget" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget'"
+      Begin Object Name="K2Node_ClearDelegate_0" ExportPath="/Script/BlueprintGraph.K2Node_ClearDelegate'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_ClearDelegate_0'"
+         DelegateReference=(MemberParent="/Script/UMG.WidgetBlueprintGeneratedClass'WBP_Requester_C'",MemberName="DispatcherNo",MemberGuid=B143BA6140523F8F4E16EC9F295908D1)
+         NodePosX=592
+         NodePosY=176
+         NodeGuid=18CA559E4AB27A30CFE5EF842EAE5985
+         CustomProperties Pin (PinId=301ECAEB4D28A30FBC0E35A12B4F7D70,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_VariableSet_2 5E195D6342F4F80D0F9C9DA49504D964,K2Node_MacroInstance_0 E331E74B4080AF3075DE368DD5A94C92,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=B72423E94736E2589E29AC9E3E51DABD,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_ClearDelegate_1 BAA1659B4D60895DBCF99FACDC398A1D,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=BD5FAD7846009AFD30A6B18404FEEB16,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "BaseMCDelegateSelfPinName", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_VariableGet_1 2235A34E49164CC9862A2F91D28C6368,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_ClearDelegate_1" ExportPath="/Script/BlueprintGraph.K2Node_ClearDelegate'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_ClearDelegate_1'"
+         DelegateReference=(MemberParent="/Script/UMG.WidgetBlueprintGeneratedClass'WBP_Requester_C'",MemberName="DispatcherYes",MemberGuid=FBBE78C5450BB460187165AFC00B1F48)
+         NodePosX=592
+         NodePosY=336
+         NodeGuid=7636A71B4B3A45CBDCD081BF5BD6B968
+         CustomProperties Pin (PinId=BAA1659B4D60895DBCF99FACDC398A1D,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_ClearDelegate_0 B72423E94736E2589E29AC9E3E51DABD,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=2A0B49024636C43B6106B2916C83390B,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_FunctionResult_0 31CE3E284C8FBEE329584FA57271A353,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=77DA328E4FB965CED90348B69A262CEF,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "BaseMCDelegateSelfPinName", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_VariableGet_1 2235A34E49164CC9862A2F91D28C6368,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_CreateWidget_0" ExportPath="/Script/UMGEditor.K2Node_CreateWidget'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_CreateWidget_0'"
+         NodePosX=-144
+         NodePosY=400
+         NodeGuid=5BCDC85C4490382933DCB2BA9BB73CD0
+         CustomProperties Pin (PinId=F20948204528C0AD0875AB9622C9CF95,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_MacroInstance_0 A8AFAF554FD57171A640C09107368633,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=A960B4304814ED0B5B7A549D08688AE1,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_VariableSet_2 009D2BEF46C97E67FA1816A3B13BBBC3,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=DA0D553840DE7F8738DFFB936E5CFE15,PinName="Class",PinType.PinCategory="class",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/CoreUObject.Class'/Script/UMG.UserWidget'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,DefaultObject="/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=FF3D2DDB4F824195D952BBB4D6561984,PinName="ReturnValue",Direction="EGPD_Output",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_VariableSet_2 143162754BB76FF0FB72ADB23D75ED24,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=B6AF6CC54718C042531DE596E3FCA8F0,PinName="OwningPlayer",PinToolTip="Player Controller Object Reference Owning Player\nThe player that \'owns\' the widget.",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.PlayerController'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_FunctionEntry_0'"
+         FunctionReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/BPI_OptionsPanel.BPI_OptionsPanel_C'",MemberName="GetRequesterWidget",MemberGuid=2BD1027D4BA3AB3D2FF0768E216B2123)
+         NodePosX=-864
+         NodePosY=-80
+         NodeGuid=C6E38F3F48B3CA4AA1F79D906D42E154
+         CustomProperties Pin (PinId=513C9F5145B11E1DBB7F39A686BE8416,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_MacroInstance_0 31AAABA44B20868B0D9E4F8BAD578636,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_FunctionResult_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_FunctionResult_0'"
+         FunctionReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/BPI_OptionsPanel.BPI_OptionsPanel_C'",MemberName="GetRequesterWidget",MemberGuid=2BD1027D4BA3AB3D2FF0768E216B2123)
+         NodePosX=864
+         NodePosY=576
+         NodeGuid=94FC8FF34A0DFE7141F5C5AFF7B1B198
+         CustomProperties Pin (PinId=31CE3E284C8FBEE329584FA57271A353,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_ClearDelegate_1 2A0B49024636C43B6106B2916C83390B,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=C7E8A9C84D0CB911BE2BB896E1A36647,PinName="requester",PinToolTip="Requester\nWBP Requester Object Reference",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_VariableSet_2 8433BCCF451498C2882B37BD3D9EA341,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_MacroInstance_0" ExportPath="/Script/BlueprintGraph.K2Node_MacroInstance'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_MacroInstance_0'"
+         MacroGraphReference=(MacroGraph="/Script/Engine.EdGraph'/Engine/EditorBlueprintResources/StandardMacros.StandardMacros:IsValid'",GraphBlueprint="/Script/Engine.Blueprint'/Engine/EditorBlueprintResources/StandardMacros.StandardMacros'",GraphGuid=64422BCD430703FF5CAEA8B79A32AA65)
+         NodePosX=-560
+         NodePosY=224
+         NodeGuid=F692DB82445300B327680E8B03C66547
+         CustomProperties Pin (PinId=31AAABA44B20868B0D9E4F8BAD578636,PinName="exec",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_FunctionEntry_0 513C9F5145B11E1DBB7F39A686BE8416,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=F19280644CBF91B02FE6FDA5707E5A1F,PinName="InputObject",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/CoreUObject.Class'/Script/CoreUObject.Object'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_VariableGet_0 FFB2448F438D179A9A4215A769A00D0E,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=E331E74B4080AF3075DE368DD5A94C92,PinName="Is Valid",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_ClearDelegate_0 301ECAEB4D28A30FBC0E35A12B4F7D70,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=A8AFAF554FD57171A640C09107368633,PinName="Is Not Valid",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CreateWidget_0 F20948204528C0AD0875AB9622C9CF95,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_VariableGet_0" ExportPath="/Script/BlueprintGraph.K2Node_VariableGet'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_VariableGet_0'"
+         VariableReference=(MemberName="requester",MemberGuid=C5299573494D5A32056CE394CEA583A4,bSelfContext=True)
+         NodePosX=-928
+         NodePosY=304
+         NodeGuid=7A012B1245AA844CC152E7BEBD897191
+         CustomProperties Pin (PinId=FFB2448F438D179A9A4215A769A00D0E,PinName="requester",Direction="EGPD_Output",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_MacroInstance_0 F19280644CBF91B02FE6FDA5707E5A1F,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=A7D11E3E4C8713B929E8528D4DC0F721,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=True,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_VariableGet_1" ExportPath="/Script/BlueprintGraph.K2Node_VariableGet'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_VariableGet_1'"
+         VariableReference=(MemberName="requester",MemberGuid=C5299573494D5A32056CE394CEA583A4,bSelfContext=True)
+         NodePosX=576
+         NodeGuid=6F04BEF5413E9C1F72E64D9F0FA3F48D
+         CustomProperties Pin (PinId=2235A34E49164CC9862A2F91D28C6368,PinName="requester",Direction="EGPD_Output",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_ClearDelegate_1 77DA328E4FB965CED90348B69A262CEF,K2Node_ClearDelegate_0 BD5FAD7846009AFD30A6B18404FEEB16,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=56A638D64C298969994299976957A0B1,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=True,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_VariableSet_2" ExportPath="/Script/BlueprintGraph.K2Node_VariableSet'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget.K2Node_VariableSet_2'"
+         VariableReference=(MemberName="requester",MemberGuid=C5299573494D5A32056CE394CEA583A4,bSelfContext=True)
+         NodePosX=272
+         NodePosY=288
+         NodeGuid=1DF1E20641B9F041B2098988E74A1C99
+         CustomProperties Pin (PinId=009D2BEF46C97E67FA1816A3B13BBBC3,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CreateWidget_0 A960B4304814ED0B5B7A549D08688AE1,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=5E195D6342F4F80D0F9C9DA49504D964,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_ClearDelegate_0 301ECAEB4D28A30FBC0E35A12B4F7D70,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=143162754BB76FF0FB72ADB23D75ED24,PinName="requester",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CreateWidget_0 FF3D2DDB4F824195D952BBB4D6561984,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=8433BCCF451498C2882B37BD3D9EA341,PinName="Output_Get",PinToolTip="Retrieves the value of the variable, can use instead of a separate Get node",Direction="EGPD_Output",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_FunctionResult_0 C7E8A9C84D0CB911BE2BB896E1A36647,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=DC3F1F19415E4B8AC1CC1F8A9092CD35,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=True,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      Nodes(1)="/Script/BlueprintGraph.K2Node_FunctionResult'K2Node_FunctionResult_0'"
+      Nodes(2)="/Script/UMGEditor.K2Node_CreateWidget'K2Node_CreateWidget_0'"
+      Nodes(3)="/Script/BlueprintGraph.K2Node_MacroInstance'K2Node_MacroInstance_0'"
+      Nodes(4)="/Script/BlueprintGraph.K2Node_VariableGet'K2Node_VariableGet_0'"
+      Nodes(5)="/Script/BlueprintGraph.K2Node_VariableGet'K2Node_VariableGet_1'"
+      Nodes(6)="/Script/BlueprintGraph.K2Node_VariableSet'K2Node_VariableSet_2'"
+      Nodes(7)="/Script/BlueprintGraph.K2Node_ClearDelegate'K2Node_ClearDelegate_0'"
+      Nodes(8)="/Script/BlueprintGraph.K2Node_ClearDelegate'K2Node_ClearDelegate_1'"
+      bAllowDeletion=False
+      GraphGuid=5EA659B7421F3B0F21F7DDB491E5E1CF
+      InterfaceGuid=2BD1027D4BA3AB3D2FF0768E216B2123
+   End Object
+   Begin Object Name="HasUnAppliedChanges" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:HasUnAppliedChanges'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:HasUnAppliedChanges.K2Node_FunctionEntry_0'"
+         FunctionReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/BPI_OptionsPanel.BPI_OptionsPanel_C'",MemberName="HasUnAppliedChanges",MemberGuid=EE3C5DA84CD0C022013C72B6E3A60EE2)
+         NodeGuid=E4201B23402FC30B404C20ADF928A597
+         CustomProperties Pin (PinId=C2EA207E4609AAB4602743AB3D4AB66C,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_FunctionResult_0 FEFB86294D8E7E77044FE3A50D3E2C8A,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_FunctionResult_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionResult'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:HasUnAppliedChanges.K2Node_FunctionResult_0'"
+         FunctionReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/BPI_OptionsPanel.BPI_OptionsPanel_C'",MemberName="HasUnAppliedChanges",MemberGuid=EE3C5DA84CD0C022013C72B6E3A60EE2)
+         NodePosX=256
+         NodeGuid=BDAEA90E4424D4DCE66E54A683FBD052
+         CustomProperties Pin (PinId=FEFB86294D8E7E77044FE3A50D3E2C8A,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_FunctionEntry_0 C2EA207E4609AAB4602743AB3D4AB66C,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=63270146485EBB85BFB1C58B5D181C16,PinName="hasUnAppliedChanges",PinToolTip="Has Un Applied Changes\nBoolean",PinType.PinCategory="bool",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,DefaultValue="false",AutogeneratedDefaultValue="false",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      Nodes(1)="/Script/BlueprintGraph.K2Node_FunctionResult'K2Node_FunctionResult_0'"
+      bAllowDeletion=False
+      GraphGuid=AFEC85E74C8930FAFCEEAEA6C52354B1
+      InterfaceGuid=EE3C5DA84CD0C022013C72B6E3A60EE2
+   End Object
+   Begin Object Name="Show Requester" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Show Requester'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Show Requester.K2Node_FunctionEntry_0'"
+         CustomGeneratedFunctionName="Show Requester"
+         NodePosX=-200
+         NodePosY=-2000
+         bIsIntermediateNode=True
+         NodeGuid=2EC81BAF46F571ACB94B16BC786579AC
+         CustomProperties Pin (PinId=E38C870B477E59FC650F209B739B4872,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_SetVariableOnPersistentFrame_0 36B614374D20ABC255D89AAD3DBCC33B,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=EA536DAF4D7400E726A5508D3E4430AD,PinName="InText",Direction="EGPD_Output",PinType.PinCategory="text",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,AutogeneratedDefaultValue="NSLOCTEXT(\"[3850424D93B18331FC488A0961947F85]\", \"384354554E8D06B4C9B66E9A3B41852C\", \"Are You Sure?\")",DefaultTextValue=NSLOCTEXT("[3850424D93B18331FC488A0961947F85]", "384354554E8D06B4C9B66E9A3B41852C", "Are You Sure?"),LinkedTo=(K2Node_SetVariableOnPersistentFrame_0 485F41294B72FDC9FF63BBB60C84875E,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties UserDefinedPin (PinName="InText",PinType=(PinCategory="text"),DesiredPinDirection=EGPD_Output,PinDefaultValue="NSLOCTEXT(\"[3850424D93B18331FC488A0961947F85]\", \"384354554E8D06B4C9B66E9A3B41852C\", \"Are You Sure?\")")
+      End Object
+      Begin Object Name="K2Node_SetVariableOnPersistentFrame_0" ExportPath="/Script/BlueprintGraph.K2Node_SetVariableOnPersistentFrame'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Show Requester.K2Node_SetVariableOnPersistentFrame_0'"
+         NodePosX=-1040
+         NodePosY=-2000
+         bIsIntermediateNode=True
+         NodeGuid=E00E043F44AC387116E1EF815D664019
+         CustomProperties Pin (PinId=36B614374D20ABC255D89AAD3DBCC33B,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_FunctionEntry_0 E38C870B477E59FC650F209B739B4872,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=40F7D28A466047E9553143959468675D,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_0 4EADB9C84A50D4FE7A417BA808B0C15A,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=485F41294B72FDC9FF63BBB60C84875E,PinName="K2Node_CustomEvent_InText",PinType.PinCategory="text",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_FunctionEntry_0 EA536DAF4D7400E726A5508D3E4430AD,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_CallFunction_0" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Show Requester.K2Node_CallFunction_0'"
+         FunctionReference=(MemberName="ExecuteUbergraph_WBP_Requester",bSelfContext=True)
+         NodePosX=300
+         NodePosY=-2000
+         bIsIntermediateNode=True
+         NodeGuid=2794D4564250D536AD558C9FCAD94CB8
+         CustomProperties Pin (PinId=4EADB9C84A50D4FE7A417BA808B0C15A,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_SetVariableOnPersistentFrame_0 40F7D28A466047E9553143959468675D,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=410A235F4F78A66A61E7C998A0D7580A,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=8F7E342247933EE8FD45108C7D58C2D4,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="self",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.SKEL_WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=D61EB8D54C828653D30DC6979279866C,PinName="EntryPoint",PinType.PinCategory="int",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,DefaultValue="0",AutogeneratedDefaultValue="0",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      Nodes(1)="/Script/BlueprintGraph.K2Node_SetVariableOnPersistentFrame'K2Node_SetVariableOnPersistentFrame_0'"
+      Nodes(2)="/Script/BlueprintGraph.K2Node_CallFunction'K2Node_CallFunction_0'"
+      GraphGuid=71134CB9446F13EF1242D88EA98B1ED9
+   End Object
+   Begin Object Name="BndEvt__WBP_Requester_btn_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:BndEvt__WBP_Requester_btn_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:BndEvt__WBP_Requester_btn_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature.K2Node_FunctionEntry_0'"
+         CustomGeneratedFunctionName="BndEvt__WBP_Requester_btn_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature"
+         FunctionReference=(MemberParent="/Script/CoreUObject.Package'/Script/UMG'",MemberName="OnButtonClickedEvent__DelegateSignature")
+         NodePosX=-200
+         NodePosY=-2000
+         bIsIntermediateNode=True
+         NodeGuid=68FA925548F7178497DADD940526D82B
+         CustomProperties Pin (PinId=6404578B4D7D5EA7826636803C972AFE,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_0 7D9280F14E53D5BDC12F13A1F1C773B2,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_CallFunction_0" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:BndEvt__WBP_Requester_btn_No_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature.K2Node_CallFunction_0'"
+         FunctionReference=(MemberName="ExecuteUbergraph_WBP_Requester",bSelfContext=True)
+         NodePosX=300
+         NodePosY=-2000
+         bIsIntermediateNode=True
+         NodeGuid=1860D15D4D08F05CA3744D8530CDEA0D
+         CustomProperties Pin (PinId=7D9280F14E53D5BDC12F13A1F1C773B2,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_FunctionEntry_0 6404578B4D7D5EA7826636803C972AFE,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=552556FA4FAE0BD8C63C2D8D3B4A0E79,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=B0CAD8AF41CFE52D95640C83AC081997,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="self",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.SKEL_WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=B4E8096740CF6A8E32DCD985B9F8D870,PinName="EntryPoint",PinType.PinCategory="int",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,DefaultValue="0",AutogeneratedDefaultValue="0",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      Nodes(1)="/Script/BlueprintGraph.K2Node_CallFunction'K2Node_CallFunction_0'"
+      GraphGuid=2DDB1E804559167AA453A2969499B689
+   End Object
+   Begin Object Name="BndEvt__WBP_Requester_btn_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:BndEvt__WBP_Requester_btn_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:BndEvt__WBP_Requester_btn_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature.K2Node_FunctionEntry_0'"
+         CustomGeneratedFunctionName="BndEvt__WBP_Requester_btn_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature"
+         FunctionReference=(MemberParent="/Script/CoreUObject.Package'/Script/UMG'",MemberName="OnButtonClickedEvent__DelegateSignature")
+         NodePosX=-200
+         NodePosY=-2000
+         bIsIntermediateNode=True
+         NodeGuid=800A799843FFBF2B11242BA76811992A
+         CustomProperties Pin (PinId=8D9EE6F24CED8C52C0F1D18EACE8C586,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_0 2266E0BB4C92DBBDD76CBB80F772B9D9,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_CallFunction_0" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:BndEvt__WBP_Requester_btn_Yes_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature.K2Node_CallFunction_0'"
+         FunctionReference=(MemberName="ExecuteUbergraph_WBP_Requester",bSelfContext=True)
+         NodePosX=300
+         NodePosY=-2000
+         bIsIntermediateNode=True
+         NodeGuid=A77222884A1AD0128965048B55EF78D0
+         CustomProperties Pin (PinId=2266E0BB4C92DBBDD76CBB80F772B9D9,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_FunctionEntry_0 8D9EE6F24CED8C52C0F1D18EACE8C586,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=3171043F44DBB1FC25ABEEB80040D01A,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=2A89857B46069BC323BB249D9B916EB7,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="self",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.SKEL_WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=C6EE465745E08A792040B889713DF987,PinName="EntryPoint",PinType.PinCategory="int",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,DefaultValue="0",AutogeneratedDefaultValue="0",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      Nodes(1)="/Script/BlueprintGraph.K2Node_CallFunction'K2Node_CallFunction_0'"
+      GraphGuid=05E7A28E4383EF5CF9B17593EB5FDA58
+   End Object
+   Begin Object Name="Reset" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Reset'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Reset.K2Node_FunctionEntry_0'"
+         CustomGeneratedFunctionName="Reset"
+         FunctionReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/BPI_OptionsPanel.BPI_OptionsPanel_C'",MemberName="Reset",MemberGuid=15F5377949D9763F991DFE9C1DEF0D2E)
+         NodePosX=-200
+         NodePosY=-2000
+         bIsIntermediateNode=True
+         NodeGuid=78D3E47D48D6F796AEAA5A82ECA6DB02
+         CustomProperties Pin (PinId=01E29FE943B996C56CF35D9D7C90A638,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_0 71D2311444FD1CDC8A7D65A77A2D1DDF,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_CallFunction_0" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Reset.K2Node_CallFunction_0'"
+         FunctionReference=(MemberName="ExecuteUbergraph_WBP_Requester",bSelfContext=True)
+         NodePosX=300
+         NodePosY=-2000
+         bIsIntermediateNode=True
+         NodeGuid=5C0B434546438122E4D247B7D81C1268
+         CustomProperties Pin (PinId=71D2311444FD1CDC8A7D65A77A2D1DDF,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_FunctionEntry_0 01E29FE943B996C56CF35D9D7C90A638,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=96B0B5594E7E767C392861860C3846CE,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=1E8CC8454C95CD1D9F9676B7774D41D0,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="self",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.SKEL_WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=8D3777F045E9DE75247ED8BA9DEA91BD,PinName="EntryPoint",PinType.PinCategory="int",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,DefaultValue="0",AutogeneratedDefaultValue="0",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      Nodes(1)="/Script/BlueprintGraph.K2Node_CallFunction'K2Node_CallFunction_0'"
+      GraphGuid=96F0EEF540C48A6C7997DA8E0E05D0BD
+   End Object
+   Begin Object Name="Apply" ExportPath="/Script/Engine.EdGraph'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Apply'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Apply.K2Node_FunctionEntry_0'"
+         CustomGeneratedFunctionName="Apply"
+         FunctionReference=(MemberParent="/Script/Engine.BlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/BPI_OptionsPanel.BPI_OptionsPanel_C'",MemberName="Apply",MemberGuid=F80AAB3545912677AF5AE6ADA58C6F01)
+         NodePosX=-200
+         NodePosY=-2000
+         bIsIntermediateNode=True
+         NodeGuid=59D34A4A435323B64ED2F3B6D20FE46C
+         CustomProperties Pin (PinId=8E009E364DB33F44C05DA9AA574E59F7,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_CallFunction_0 495A8A13400350739BB139863555A6F5,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="K2Node_CallFunction_0" ExportPath="/Script/BlueprintGraph.K2Node_CallFunction'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:Apply.K2Node_CallFunction_0'"
+         FunctionReference=(MemberName="ExecuteUbergraph_WBP_Requester",bSelfContext=True)
+         NodePosX=300
+         NodePosY=-2000
+         bIsIntermediateNode=True
+         NodeGuid=0BD957524CEC242D0CE8009CA7E9B1D7
+         CustomProperties Pin (PinId=495A8A13400350739BB139863555A6F5,PinName="execute",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_FunctionEntry_0 8E009E364DB33F44C05DA9AA574E59F7,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=0A1BC0D64C895412BE7475BAC3F3EF3D,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=A50EDA6A427349DCB294D99C867B36D0,PinName="self",PinFriendlyName=NSLOCTEXT("K2Node", "Target", "Target"),PinType.PinCategory="object",PinType.PinSubCategory="self",PinType.PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.SKEL_WBP_Requester_C'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=55B744EA4034E7AA7E551BAB8752AFB8,PinName="EntryPoint",PinType.PinCategory="int",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,DefaultValue="0",AutogeneratedDefaultValue="0",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      Nodes(1)="/Script/BlueprintGraph.K2Node_CallFunction'K2Node_CallFunction_0'"
+      GraphGuid=15EE81C24686D62F10371DA9855562BA
+   End Object
+   WidgetTree="WidgetTree"
+   ParentClass="/Script/CoreUObject.Class'/Script/UMG.UserWidget'"
+   BlueprintSystemVersion=2
+   UbergraphPages(0)="/Script/Engine.EdGraph'EventGraph'"
+   FunctionGraphs(0)="/Script/Engine.EdGraph'ClearDispatchers'"
+   DelegateSignatureGraphs(0)="/Script/Engine.EdGraph'DispatcherYes'"
+   DelegateSignatureGraphs(1)="/Script/Engine.EdGraph'DispatcherNo'"
+   NewVariables(0)=(VarName="requester",VarGuid=C5299573494D5A32056CE394CEA583A4,VarType=(PinCategory="object",PinSubCategoryObject="/Script/UMG.WidgetBlueprintGeneratedClass'WBP_Requester_C'"),FriendlyName="Requester",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=65541)
+   NewVariables(1)=(VarName="DispatcherYes",VarGuid=FBBE78C5450BB460187165AFC00B1F48,VarType=(PinCategory="mcdelegate"),FriendlyName="Dispatcher Yes",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=17592454545413)
+   NewVariables(2)=(VarName="DispatcherNo",VarGuid=B143BA6140523F8F4E16EC9F295908D1,VarType=(PinCategory="mcdelegate"),FriendlyName="Dispatcher No",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=17592454545413)
+   CategorySorting(0)="Event Graph"
+   CategorySorting(1)="WBP Requester"
+   CategorySorting(2)=""
+   CategorySorting(3)="Default"
+   ImplementedInterfaces(0)=(Interface="/Script/Engine.BlueprintGeneratedClass'/Game/Users/WJ/Nightmares/UserWidgets/Setting/BPI_OptionsPanel.BPI_OptionsPanel_C'",Graphs=("/Script/Engine.EdGraph'GetRequesterWidget'","/Script/Engine.EdGraph'HasUnAppliedChanges'"))
+   LastEditedDocuments(0)=(EditedObjectPath="/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:ClearDispatchers",SavedViewOffset=(X=-613.764648,Y=-602.625000),SavedZoomAmount=1.000000)
+   LastEditedDocuments(1)=(EditedObjectPath="/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:EventGraph",SavedViewOffset=(X=-1510.764648,Y=1305.122586),SavedZoomAmount=0.500000)
+   LastEditedDocuments(2)=(EditedObjectPath="/Game/Users/WJ/Nightmares/UserWidgets/Setting/WBP_Requester.WBP_Requester:GetRequesterWidget",SavedViewOffset=(X=-688.717029,Y=-530.250206),SavedZoomAmount=0.750000)
+   GeneratedClass="/Script/UMG.WidgetBlueprintGeneratedClass'WBP_Requester_C'"
+   bLegacyNeedToPurgeSkelRefs=False
+   BlueprintGuid=05C658DE4431EFE9EE3024AA964B3F40
+End Object
