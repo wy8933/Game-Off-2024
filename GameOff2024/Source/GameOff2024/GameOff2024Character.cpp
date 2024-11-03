@@ -10,6 +10,8 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "Engine/LocalPlayer.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "InteractableActor.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -62,14 +64,21 @@ void AGameOff2024Character::SetupPlayerInputComponent(UInputComponent* PlayerInp
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AGameOff2024Character::Look);
 
 		//Sprinting
-		//EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Triggered, this, &AGameOff2024Character::Sprint);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Started, this, &AGameOff2024Character::Sprint);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this, &AGameOff2024Character::StopSprinting);
 
 		//Crouching
+		EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Started, this, &AGameOff2024Character::ToggleCrouch);
+
+		//Interacting
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &AGameOff2024Character::Interact);
 	}
 	else
 	{
 		UE_LOG(LogTemplateCharacter, Error, TEXT("'%s' Failed to find an Enhanced Input Component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
 	}
+
+	WalkSpeed = CharacterMovement->MaxWalkSpeed;
 }
 
 
@@ -83,6 +92,7 @@ void AGameOff2024Character::Move(const FInputActionValue& Value)
 		// add movement 
 		AddMovementInput(GetActorForwardVector(), MovementVector.Y);
 		AddMovementInput(GetActorRightVector(), MovementVector.X);
+		
 	}
 }
 
@@ -96,5 +106,66 @@ void AGameOff2024Character::Look(const FInputActionValue& Value)
 		// add yaw and pitch input to controller
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
+	}
+}
+
+void AGameOff2024Character::Sprint(const FInputActionValue& Value)
+{
+	IsSprinting = true;
+	CharacterMovement->MaxWalkSpeed = MaxSprintSpeed;
+}
+
+void AGameOff2024Character::StopSprinting(const FInputActionValue& Value)
+{
+	IsSprinting = false;
+	CharacterMovement->MaxWalkSpeed = WalkSpeed;
+}
+
+void AGameOff2024Character::ToggleCrouch(const FInputActionValue& Value)
+{
+	if (bIsCrouched == false)
+	{
+		Crouch();
+	}
+	else
+	{
+		UnCrouch();
+	}
+}
+
+void AGameOff2024Character::Interact(const FInputActionValue& Value)
+{
+	FVector CameraLocation = FirstPersonCameraComponent->GetComponentLocation();
+	FRotator CameraRotation = FirstPersonCameraComponent->GetComponentRotation();
+
+
+	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true, this);
+	RV_TraceParams.bTraceComplex = true;
+	//RV_TraceParams.bTraceAsyncScene = true;
+	RV_TraceParams.bReturnPhysicalMaterial = false;
+
+	//Re-initialize hit info
+	FHitResult RV_Hit(ForceInit);
+
+	//call GetWorld() from within an actor extending class
+	GetWorld()->LineTraceSingleByChannel(
+		RV_Hit,		//result
+		CameraLocation,	//start
+		CameraLocation + (CameraRotation.Vector() * MaxInteractionRange), //end
+		ECC_Pawn, //collision channel
+		RV_TraceParams
+	);
+
+	if (RV_Hit.bBlockingHit)//did hit something? (bool)
+	{
+		AActor* actor = RV_Hit.GetActor(); //the hit actor if there is one
+
+		UE_LOG(LogTemp, Display, TEXT("Hit"));
+
+		if (actor->GetClass()->IsChildOf(AInteractableActor::StaticClass()))
+		{
+			AInteractableActor* interactableActor = (AInteractableActor*) actor;
+			interactableActor->Interact();
+		}
 	}
 }
