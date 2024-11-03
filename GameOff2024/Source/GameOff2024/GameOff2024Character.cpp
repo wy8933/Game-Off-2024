@@ -11,6 +11,7 @@
 #include "InputActionValue.h"
 #include "Engine/LocalPlayer.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "InteractableActor.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -68,6 +69,9 @@ void AGameOff2024Character::SetupPlayerInputComponent(UInputComponent* PlayerInp
 
 		//Crouching
 		EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Started, this, &AGameOff2024Character::ToggleCrouch);
+
+		//Interacting
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &AGameOff2024Character::Interact);
 	}
 	else
 	{
@@ -126,5 +130,42 @@ void AGameOff2024Character::ToggleCrouch(const FInputActionValue& Value)
 	else
 	{
 		UnCrouch();
+	}
+}
+
+void AGameOff2024Character::Interact(const FInputActionValue& Value)
+{
+	FVector CameraLocation = FirstPersonCameraComponent->GetComponentLocation();
+	FRotator CameraRotation = FirstPersonCameraComponent->GetComponentRotation();
+
+
+	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true, this);
+	RV_TraceParams.bTraceComplex = true;
+	//RV_TraceParams.bTraceAsyncScene = true;
+	RV_TraceParams.bReturnPhysicalMaterial = false;
+
+	//Re-initialize hit info
+	FHitResult RV_Hit(ForceInit);
+
+	//call GetWorld() from within an actor extending class
+	GetWorld()->LineTraceSingleByChannel(
+		RV_Hit,		//result
+		CameraLocation,	//start
+		CameraLocation + (CameraRotation.Vector() * MaxInteractionRange), //end
+		ECC_Pawn, //collision channel
+		RV_TraceParams
+	);
+
+	if (RV_Hit.bBlockingHit)//did hit something? (bool)
+	{
+		AActor* actor = RV_Hit.GetActor(); //the hit actor if there is one
+
+		UE_LOG(LogTemp, Display, TEXT("Hit"));
+
+		if (actor->GetClass()->IsChildOf(AInteractableActor::StaticClass()))
+		{
+			AInteractableActor* interactableActor = (AInteractableActor*) actor;
+			interactableActor->Interact();
+		}
 	}
 }

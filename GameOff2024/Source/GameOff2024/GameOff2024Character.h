@@ -23,9 +23,9 @@ class AGameOff2024Character : public ACharacter
 
 	class UCharacterMovementComponent* CharacterMovement = GetCharacterMovement();
 
-
-
-
+	/** Interact Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* InteractAction;
 
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Mesh, meta = (AllowPrivateAccess = "true"))
@@ -67,6 +67,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Character Movement: Walking")
 	float MaxSprintSpeed = 900.0f;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction")
+	float MaxInteractionRange = 300.0f;
+
 public:
 		
 	/** Look Input Action */
@@ -86,6 +89,9 @@ protected:
 
 	/** Called for crouch input */
 	void ToggleCrouch(const FInputActionValue& Value);
+
+	/** Called for Interact input*/
+	void Interact(const FInputActionValue& Value);
 
 protected:
 	// APawn interface
