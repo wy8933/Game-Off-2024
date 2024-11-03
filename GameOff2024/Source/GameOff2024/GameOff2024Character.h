@@ -21,6 +21,12 @@ class AGameOff2024Character : public ACharacter
 {
 	GENERATED_BODY()
 
+	class UCharacterMovementComponent* CharacterMovement = GetCharacterMovement();
+
+
+
+
+
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Mesh, meta = (AllowPrivateAccess = "true"))
 	USkeletalMeshComponent* Mesh1P;
@@ -36,12 +42,30 @@ class AGameOff2024Character : public ACharacter
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* MoveAction;
-	
+
+	/** Sprint Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* SprintAction;
+
+	/** Crouch Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* CrouchAction;
+
 public:
 	AGameOff2024Character();
 
 protected:
 	virtual void BeginPlay();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	bool IsSprinting = false;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	float WalkSpeed = 600.0f;
+
+	//** The value multiplied to the default speed while sprinting */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Character Movement: Walking")
+	float MaxSprintSpeed = 900.0f;
 
 public:
 		
@@ -55,6 +79,13 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
+
+	/** Called for Sprint input */
+	void Sprint(const FInputActionValue& Value);
+	void StopSprinting(const FInputActionValue& Value);
+
+	/** Called for crouch input */
+	void ToggleCrouch(const FInputActionValue& Value);
 
 protected:
 	// APawn interface
