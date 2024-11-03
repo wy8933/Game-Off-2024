@@ -10,6 +10,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "Engine/LocalPlayer.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -62,14 +63,18 @@ void AGameOff2024Character::SetupPlayerInputComponent(UInputComponent* PlayerInp
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AGameOff2024Character::Look);
 
 		//Sprinting
-		//EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Triggered, this, &AGameOff2024Character::Sprint);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Started, this, &AGameOff2024Character::Sprint);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this, &AGameOff2024Character::StopSprinting);
 
 		//Crouching
+		EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Started, this, &AGameOff2024Character::ToggleCrouch);
 	}
 	else
 	{
 		UE_LOG(LogTemplateCharacter, Error, TEXT("'%s' Failed to find an Enhanced Input Component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
 	}
+
+	WalkSpeed = CharacterMovement->MaxWalkSpeed;
 }
 
 
@@ -83,6 +88,7 @@ void AGameOff2024Character::Move(const FInputActionValue& Value)
 		// add movement 
 		AddMovementInput(GetActorForwardVector(), MovementVector.Y);
 		AddMovementInput(GetActorRightVector(), MovementVector.X);
+		
 	}
 }
 
@@ -96,5 +102,29 @@ void AGameOff2024Character::Look(const FInputActionValue& Value)
 		// add yaw and pitch input to controller
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
+	}
+}
+
+void AGameOff2024Character::Sprint(const FInputActionValue& Value)
+{
+	IsSprinting = true;
+	CharacterMovement->MaxWalkSpeed = MaxSprintSpeed;
+}
+
+void AGameOff2024Character::StopSprinting(const FInputActionValue& Value)
+{
+	IsSprinting = false;
+	CharacterMovement->MaxWalkSpeed = WalkSpeed;
+}
+
+void AGameOff2024Character::ToggleCrouch(const FInputActionValue& Value)
+{
+	if (bIsCrouched == false)
+	{
+		Crouch();
+	}
+	else
+	{
+		UnCrouch();
 	}
 }
