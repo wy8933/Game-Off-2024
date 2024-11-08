@@ -12,10 +12,26 @@
 UCLASS()
 class GAMEOFF2024_API ADialogueActor : public AInteractableActor
 {
-	GENERATED_BODY()
-	
+    GENERATED_BODY()
+
 public:
-	// Sets default values for this actor's properties
-	ADialogueActor();
-	virtual void Tick(float DeltaTime) override;
+    ADialogueActor();
+
+    // Called when the actor is interacted with
+    virtual void Interact() override;
+
+protected:
+    virtual void BeginPlay() override;
+
+    // Dialogue text to display
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
+    FText DialogueText;
+
+    // The class of the dialogue widget to display
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
+    TSubclassOf<UUserWidget> DialogueWidgetClass;
+
+private:
+    // The instance of the dialogue widget
+    UUserWidget* DialogueWidgetInstance;
 };
