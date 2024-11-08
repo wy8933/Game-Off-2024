@@ -23,6 +23,10 @@ class AGameOff2024Character : public ACharacter
 
 	class UCharacterMovementComponent* CharacterMovement = GetCharacterMovement();
 
+	class AInteractableActor* targetInteractable;
+
+	void GetInteractableTarget();
+
 	/** Interact Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* InteractAction;
@@ -103,6 +107,9 @@ public:
 	USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
+
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
 
 };
 

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "InteractionPromptWidget.h"
 #include "InteractableActor.generated.h"
 
 UCLASS(BlueprintType)
@@ -14,7 +15,6 @@ class GAMEOFF2024_API AInteractableActor : public AActor
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* VisualMesh;
 
-	
 public:	
 	// Sets default values for this actor's properties
 	AInteractableActor();
@@ -24,7 +24,13 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
+	//Reference to the interaction prompt
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	UInteractionPromptWidget* InteractPrompt;
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	virtual void Interact();
+	virtual void EnableInteractPrompt();
+	virtual void DisableInteractPrompt();
 };

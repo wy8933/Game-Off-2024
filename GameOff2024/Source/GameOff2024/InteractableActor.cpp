@@ -1,7 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "InteractableActor.h"
+#include "Components/WidgetComponent.h"
+#include "InteractionPromptWidget.h"
+
 
 // Sets default values
 AInteractableActor::AInteractableActor()
@@ -19,14 +21,16 @@ AInteractableActor::AInteractableActor()
 		VisualMesh->SetStaticMesh(CubeVisualAsset.Object);
 		VisualMesh->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
 	}
-
 }
 
 // Called when the game starts or when spawned
 void AInteractableActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	InteractPrompt = CreateWidget<UInteractionPromptWidget>(GetWorld()->GetFirstPlayerController(), UInteractionPromptWidget::StaticClass(), "Interaction Prompt");
+	InteractPrompt->AddToViewport();
+	//DisableInteractPrompt();
 }
 
 // Called every frame
@@ -38,9 +42,16 @@ void AInteractableActor::Tick(float DeltaTime)
 
 void AInteractableActor::Interact()
 {
-	//Do interaction stuff here
-
-	UE_LOG(LogTemp, Display, TEXT("Interacted with interactable"));
+	DisableInteractPrompt();
 	Destroy();
 }
 
+void AInteractableActor::EnableInteractPrompt()
+{
+	InteractPrompt->SetVisibility(ESlateVisibility::Visible);
+}
+
+void AInteractableActor::DisableInteractPrompt()
+{
+	InteractPrompt->SetVisibility(ESlateVisibility::Hidden);
+}

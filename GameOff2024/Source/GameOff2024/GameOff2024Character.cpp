@@ -135,9 +135,17 @@ void AGameOff2024Character::ToggleCrouch(const FInputActionValue& Value)
 
 void AGameOff2024Character::Interact(const FInputActionValue& Value)
 {
+	if (targetInteractable != nullptr)
+	{
+		targetInteractable->Interact();
+	}
+}
+
+void AGameOff2024Character::GetInteractableTarget()
+{
 	FVector CameraLocation = FirstPersonCameraComponent->GetComponentLocation();
 	FRotator CameraRotation = FirstPersonCameraComponent->GetComponentRotation();
-
+	AInteractableActor* interactableActor = nullptr;
 
 	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true, this);
 	RV_TraceParams.bTraceComplex = true;
@@ -160,12 +168,33 @@ void AGameOff2024Character::Interact(const FInputActionValue& Value)
 	{
 		AActor* actor = RV_Hit.GetActor(); //the hit actor if there is one
 
-		UE_LOG(LogTemp, Display, TEXT("Hit"));
+		//UE_LOG(LogTemp, Display, TEXT("Hit"));
 
 		if (actor->GetClass()->IsChildOf(AInteractableActor::StaticClass()))
 		{
-			AInteractableActor* interactableActor = (AInteractableActor*) actor;
-			interactableActor->Interact();
+			interactableActor = (AInteractableActor*)actor;
+			if (targetInteractable != interactableActor)
+			{
+				targetInteractable = interactableActor;
+
+				if (interactableActor != nullptr)
+				{
+					//enable interaction prompt
+					interactableActor->EnableInteractPrompt();
+				}
+				else
+				{
+					// disable interaction prompt
+					interactableActor->DisableInteractPrompt();
+				}
+			}
 		}
 	}
+}
+
+void AGameOff2024Character::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	GetInteractableTarget();
 }
