@@ -1,13 +1,12 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "../InteractableActor.h"
+#include "DialogueWidget.h" 
 #include "DialogueActor.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class GAMEOFF2024_API ADialogueActor : public AInteractableActor

@@ -3,6 +3,7 @@
 
 #include "DialogueActor.h"
 #include "Blueprint/UserWidget.h"
+
 ADialogueActor::ADialogueActor()
 {
     // Set a default dialogue text
@@ -27,7 +28,8 @@ void ADialogueActor::BeginPlay()
 
 void ADialogueActor::Interact()
 {
-    Super::Interact();
+    //Super::Interact();
+
     if (GEngine)
     {
         GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Actor interacted"));
@@ -35,7 +37,14 @@ void ADialogueActor::Interact()
     if (DialogueWidgetInstance)
     {
         // Show the dialogue widget when interacted with it
-        DialogueWidgetInstance->SetVisibility(ESlateVisibility::Visible);
+        DialogueWidgetInstance->SetVisibility(ESlateVisibility::Visible); 
+
+        UDialogueWidget* DialogueWidget = Cast<UDialogueWidget>(DialogueWidgetInstance);
+        if (DialogueWidget)
+        {
+            DialogueWidget->SetDialogueText(DialogueText);
+        }
+
         if (GEngine)
         {
             GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Widget created"));
