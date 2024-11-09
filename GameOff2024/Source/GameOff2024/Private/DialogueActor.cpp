@@ -14,16 +14,15 @@ void ADialogueActor::BeginPlay()
     Super::BeginPlay();
 
     // Ensure the widget class is set before creating the widget
-    if (DialogueWidgetClass)
+   
+    DialogueWidgetInstance = CreateWidget<UUserWidget>(GetWorld(), DialogueWidgetClass);
+    if (DialogueWidgetInstance)
     {
-        DialogueWidgetInstance = CreateWidget<UUserWidget>(GetWorld(), DialogueWidgetClass);
-        if (DialogueWidgetInstance)
-        {
-            // Initially hide the widget
-            DialogueWidgetInstance->AddToViewport();
-            DialogueWidgetInstance->SetVisibility(ESlateVisibility::Hidden);
-        }
+        // Initially hide the widget
+        DialogueWidgetInstance->AddToViewport();
+        DialogueWidgetInstance->SetVisibility(ESlateVisibility::Hidden);
     }
+    
 }
 
 void ADialogueActor::Interact()
