@@ -31,8 +31,7 @@ void ADialogueActor::BeginPlay()
     // Initialize Dialogue System Manager with starting dialogue
     if (DialogueSystemManager)
     {
-        DialogueSystemManager->CurrentNodeID = 1; // Starting node ID (set this as needed)
-        DialogueSystemManager->DialogueDataTable = LoadObject<UDataTable>(nullptr, TEXT("/Game/Path/To/DT_DialogueTreeData.DT_DialogueTreeData"));
+        DialogueSystemManager->CurrentNodeID = 0;
     }
     
 }
@@ -48,14 +47,13 @@ void ADialogueActor::Interact()
     if (DialogueSystemManager && DialogueWidgetInstance)
     {
         // Cast DialogueWidgetInstance to UDialogue to access UpdateDialogue
-        UDialogue* DialogueWidget = Cast<UDialogue>(DialogueWidgetInstance);
-        if (DialogueWidget)
+        if (DialogueWidgetInstance)
         {
             FDialogueNode CurrentNode = DialogueSystemManager->GetCurrentDialogueNode();
 
             // Display the current node's text in the dialogue widget
-            DialogueWidget->SetVisibility(ESlateVisibility::Visible);
-            DialogueWidget->UpdateDialogue(CurrentNode.SpeakerName, CurrentNode.DialogueText);
+            DialogueWidgetInstance->SetVisibility(ESlateVisibility::Visible);
+            DialogueWidgetInstance->UpdateDialogue(CurrentNode.SpeakerName, CurrentNode.DialogueText);
 
             // Move to the next node
             DialogueSystemManager->ProgressToNextNode();

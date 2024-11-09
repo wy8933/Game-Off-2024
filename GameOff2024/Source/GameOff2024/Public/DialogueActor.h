@@ -40,5 +40,5 @@ protected:
 
 private:
     // The instance of the dialogue widget
-    UUserWidget* DialogueWidgetInstance;
+    UDialogue* DialogueWidgetInstance;
 };
