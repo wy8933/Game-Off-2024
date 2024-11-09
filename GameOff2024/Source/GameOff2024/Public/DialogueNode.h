@@ -9,9 +9,6 @@ struct FDialogueNode: public FTableRowBase
     GENERATED_BODY()
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    int32 NodeID;
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
     FText DialogueText;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -21,5 +18,5 @@ struct FDialogueNode: public FTableRowBase
     FText SpeakerName;
 
     FDialogueNode()
-        : NodeID(-1), NextNodeID(-1) {}
+        : NextNodeID(-1) {}
 };
