@@ -18,6 +18,7 @@ public:
 	// Sets the dialogue text to display
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
 	void SetDialogueText(const FText& NewText);
+	void UpdateDialogue(FText SpeakerName, FText DialogueText);
 
 protected:
 	// The RichTextBlock for displaying dialogue text

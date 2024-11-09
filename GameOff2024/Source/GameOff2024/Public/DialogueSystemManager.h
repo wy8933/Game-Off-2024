@@ -21,6 +21,4 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Dialogue")
     void ProgressToNextNode();
 
-    UFUNCTION(BlueprintCallable, Category = "Dialogue")
-    void ChooseOption(const FText& ChoiceText);
 };

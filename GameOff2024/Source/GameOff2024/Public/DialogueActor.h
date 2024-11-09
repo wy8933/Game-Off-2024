@@ -3,6 +3,8 @@
 #include "CoreMinimal.h"
 #include "../InteractableActor.h"
 #include "Dialogue.h" 
+#include "DialogueSystemManager.h"
+#include "DialogueNode.h"
 #include "DialogueActor.generated.h"
 
 /**
@@ -28,7 +30,13 @@ protected:
 
     // The class of the dialogue widget to display
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
-    TSubclassOf<UUserWidget> DialogueWidgetClass;
+    TSubclassOf<UDialogue> DialogueWidgetClass;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
+    UDialogueSystemManager* DialogueSystemManager;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
+    UDataTable* DialogueDataTable;
 
 private:
     // The instance of the dialogue widget
