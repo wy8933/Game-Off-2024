@@ -17,6 +17,9 @@ struct FDialogueNode: public FTableRowBase
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     FText SpeakerName;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    USoundBase* DialogueAudio;
+
     FDialogueNode()
-        : NextNodeID(-1) {}
+        : NextNodeID(-1), DialogueAudio(nullptr) {}
 };

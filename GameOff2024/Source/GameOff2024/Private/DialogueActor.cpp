@@ -1,5 +1,6 @@
 #include "DialogueActor.h"
-#include "Dialogue.h"  // Ensure UDialogue is included
+#include "Dialogue.h"
+#include "Kismet/GameplayStatics.h"
 #include "Engine/Engine.h"
 #include "Blueprint/UserWidget.h"
 
@@ -60,6 +61,11 @@ void ADialogueActor::Interact()
 
             // Move to the next node
             ProgressToNextNode();
+        }
+        FDialogueNode CurrentNode = GetCurrentDialogueNode();
+        if (CurrentNode.DialogueAudio)
+        {
+            UGameplayStatics::PlaySound2D(GetWorld(), CurrentNode.DialogueAudio);
         }
     }
 }
