@@ -13,5 +13,9 @@ void UDialogue::SetDialogueText(const FText& NewText)
 void UDialogue::UpdateDialogue(FText SpeakerName, FText DialogueText) {
 	//format the dialogue to use rich text
 	FText FormattedText = FText::Format(FText::FromString("<Name>{0}</> {1}"), SpeakerName, DialogueText);
-	DialogueTextBlock->SetText(FormattedText);
+	SetDialogueText(FormattedText);
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FormattedText.ToString());
+	}
 }

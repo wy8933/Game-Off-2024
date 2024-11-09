@@ -5,7 +5,10 @@ FDialogueNode UDialogueSystemManager::GetCurrentDialogueNode()
 {
     if (!DialogueDataTable)
     {
-        UE_LOG(LogTemp, Warning, TEXT("DialogueDataTable is not set!"));
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("No Data table"));
+        }
         return FDialogueNode();
     }
 

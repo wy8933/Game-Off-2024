@@ -2,14 +2,11 @@
 
 #include "CoreMinimal.h"
 #include "../InteractableActor.h"
-#include "Dialogue.h" 
-#include "DialogueSystemManager.h"
+#include "Engine/DataTable.h"
 #include "DialogueNode.h"
+#include "Dialogue.h"
 #include "DialogueActor.generated.h"
 
-/**
- *
- */
 UCLASS()
 class GAMEOFF2024_API ADialogueActor : public AInteractableActor
 {
@@ -24,21 +21,23 @@ public:
 protected:
     virtual void BeginPlay() override;
 
-    // Dialogue text to display
+    // Dialogue data table reference
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
-    FText DialogueText;
+    UDataTable* DialogueDataTable;
+
+    // Current node ID in the dialogue tree
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
+    int32 CurrentNodeID;
 
     // The class of the dialogue widget to display
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
     TSubclassOf<UDialogue> DialogueWidgetClass;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
-    UDialogueSystemManager* DialogueSystemManager;
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
-    UDataTable* DialogueDataTable;
-
 private:
     // The instance of the dialogue widget
     UDialogue* DialogueWidgetInstance;
+
+    // Helper functions for dialogue progression
+    FDialogueNode GetCurrentDialogueNode();
+    void ProgressToNextNode();
 };
