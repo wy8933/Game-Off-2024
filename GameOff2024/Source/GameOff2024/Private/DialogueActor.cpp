@@ -29,10 +29,17 @@ void ADialogueActor::BeginPlay()
 void ADialogueActor::Interact()
 {
     Super::Interact();
-
+    if (GEngine)
+    {
+        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Actor interacted"));
+    }
     if (DialogueWidgetInstance)
     {
-        // Show the dialogue widget when interacted with
+        // Show the dialogue widget when interacted with it
         DialogueWidgetInstance->SetVisibility(ESlateVisibility::Visible);
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Widget created"));
+        }
     }
 }
