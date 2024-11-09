@@ -35,7 +35,6 @@ protected:
 
     UPROPERTY(BlueprintReadOnly, Category = "Dialogue")
     bool bIsDialogueActive;
-    void OnProgressDialogue();
 private:
     // The instance of the dialogue widget
     UDialogue* DialogueWidgetInstance;

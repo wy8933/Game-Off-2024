@@ -69,7 +69,10 @@ void ADialogueActor::Interact()
         }
     }
 }
-
+/// <summary>
+/// Get the current node for Dialogue
+/// </summary>
+/// <returns>the current dialogue node</returns>
 FDialogueNode ADialogueActor::GetCurrentDialogueNode()
 {
     if (!DialogueDataTable)
@@ -101,6 +104,9 @@ FDialogueNode ADialogueActor::GetCurrentDialogueNode()
     }
 }
 
+/// <summary>
+/// Progress to the next node and end dialogue when there is none
+/// </summary>
 void ADialogueActor::ProgressToNextNode()
 {
     FDialogueNode CurrentNode = GetCurrentDialogueNode();
