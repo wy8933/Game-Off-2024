@@ -4,12 +4,9 @@
 #include "DialogueNode.generated.h"
 
 USTRUCT(BlueprintType)
-struct FDialogueNode
+struct FDialogueNode: public FTableRowBase
 {
     GENERATED_BODY()
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    int32 NodeID;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     FText DialogueText;
@@ -18,11 +15,11 @@ struct FDialogueNode
     int32 NextNodeID;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    TMap<FString, int32> Choices;
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
     FText SpeakerName;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    USoundBase* DialogueAudio;
+
     FDialogueNode()
-        : NodeID(-1), NextNodeID(-1) {}
+        : NextNodeID(-1), DialogueAudio(nullptr) {}
 };

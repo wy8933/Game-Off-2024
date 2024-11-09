@@ -5,7 +5,10 @@ FDialogueNode UDialogueSystemManager::GetCurrentDialogueNode()
 {
     if (!DialogueDataTable)
     {
-        UE_LOG(LogTemp, Warning, TEXT("DialogueDataTable is not set!"));
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("No Data table"));
+        }
         return FDialogueNode();
     }
 
@@ -17,22 +20,12 @@ FDialogueNode UDialogueSystemManager::GetCurrentDialogueNode()
 void UDialogueSystemManager::ProgressToNextNode()
 {
     FDialogueNode CurrentNode = GetCurrentDialogueNode();
-
-    CurrentNodeID = CurrentNode.NextNodeID;
-}
-
-void UDialogueSystemManager::ChooseOption(const FText& ChoiceText)
-{
-    FDialogueNode CurrentNode = GetCurrentDialogueNode();
-
-    FString ChoiceKey = ChoiceText.ToString();
-
-    if (CurrentNode.Choices.Contains(ChoiceKey))
+    if (CurrentNode.NextNodeID != -1)
     {
-        CurrentNodeID = CurrentNode.Choices[ChoiceKey];
+        CurrentNodeID = CurrentNode.NextNodeID;
     }
     else
     {
-        UE_LOG(LogTemp, Warning, TEXT("Choice not found: %s"), *ChoiceKey);
+        UE_LOG(LogTemp, Log, TEXT("End of dialogue"));
     }
 }
