@@ -4,14 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
-#include "DialogueWidget.generated.h"
+#include "Components/RichTextBlock.h"
+#include "Dialogue.generated.h"
 
-class URichTextBlock;
 /**
- *  
+ * 
  */
 UCLASS()
-class GAMEOFF2024_API UDialogueWidget : public UUserWidget
+class GAMEOFF2024_API UDialogue : public UUserWidget
 {
 	GENERATED_BODY()
 public:

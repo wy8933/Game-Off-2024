@@ -39,7 +39,7 @@ void ADialogueActor::Interact()
         // Show the dialogue widget when interacted with it
         DialogueWidgetInstance->SetVisibility(ESlateVisibility::Visible); 
 
-        UDialogueWidget* DialogueWidget = Cast<UDialogueWidget>(DialogueWidgetInstance);
+        UDialogue* DialogueWidget = Cast<UDialogue>(DialogueWidgetInstance);
         if (DialogueWidget)
         {
             DialogueWidget->SetDialogueText(DialogueText);
