@@ -8,7 +8,8 @@ ADialogueActor::ADialogueActor()
     // Set default values
     DialogueDataTable = nullptr;
     CurrentNodeID = 0;
-    DialogueWidgetInstance = nullptr; // Initialize to nullptr
+    DialogueWidgetInstance = nullptr;
+    bIsDialogueActive = false;
 }
 
 void ADialogueActor::BeginPlay()
@@ -50,6 +51,7 @@ void ADialogueActor::Interact()
         UDialogue* DialogueWidget = Cast<UDialogue>(DialogueWidgetInstance);
         if (DialogueWidget)
         {
+            bIsDialogueActive = true;
             FDialogueNode CurrentNode = GetCurrentDialogueNode();
 
             // Display the current node's text in the dialogue widget
@@ -73,9 +75,11 @@ FDialogueNode ADialogueActor::GetCurrentDialogueNode()
         return FDialogueNode();
     }
 
+    // Find the node with the correctID
     FName RowName = FName(*FString::FromInt(CurrentNodeID));
     FDialogueNode* Node = DialogueDataTable->FindRow<FDialogueNode>(RowName, TEXT("Lookup Dialogue Node"));
 
+    // Return the node found or print debug message
     if (Node)
     {
         return *Node;
@@ -87,14 +91,14 @@ FDialogueNode ADialogueActor::GetCurrentDialogueNode()
             FString ErrorMessage = FString::Printf(TEXT("Node with ID %d not found in DialogueDataTable"), CurrentNodeID);
             GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, *ErrorMessage);
         }
-        return FDialogueNode(); // Return an empty FDialogueNode if the row wasn't found
+        return FDialogueNode();
     }
 }
 
 void ADialogueActor::ProgressToNextNode()
 {
     FDialogueNode CurrentNode = GetCurrentDialogueNode();
-    if (CurrentNode.NextNodeID != -1)
+    if (CurrentNodeID != -1)
     {
         CurrentNodeID = CurrentNode.NextNodeID;
     }
@@ -103,6 +107,7 @@ void ADialogueActor::ProgressToNextNode()
         if (DialogueWidgetInstance)
         {
             DialogueWidgetInstance->SetVisibility(ESlateVisibility::Hidden);
+            bIsDialogueActive = false;
         }
     }
 }

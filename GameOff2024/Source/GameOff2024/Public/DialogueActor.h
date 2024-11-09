@@ -33,6 +33,9 @@ protected:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
     TSubclassOf<UDialogue> DialogueWidgetClass;
 
+    UPROPERTY(BlueprintReadOnly, Category = "Dialogue")
+    bool bIsDialogueActive;
+    void OnProgressDialogue();
 private:
     // The instance of the dialogue widget
     UDialogue* DialogueWidgetInstance;
