@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "../InteractableActor.h"
-#include "DialogueWidget.h" 
+#include "Dialogue.h" 
 #include "DialogueActor.generated.h"
 
 /**
