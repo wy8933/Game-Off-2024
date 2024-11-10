@@ -23,6 +23,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditAnywhere, Category = UI)
+	FText InteractionType = FText::FromString("Interact");
+
 public:	
 	//Reference to the interaction prompt
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)

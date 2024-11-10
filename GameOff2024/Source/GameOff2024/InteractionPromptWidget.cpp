@@ -6,24 +6,26 @@
 #include "Components/CanvasPanelSlot.h"
 #include "Components/TextBlock.h"
 
+#define LOCTEXT_NAMESPACE "InteractPrompt"
+
+
+void UInteractionPromptWidget::NativeConstruct()
+{
+	Super::NativeConstruct();
+	SetPromptText();
+}
+
 
 void UInteractionPromptWidget::NativeOnInitialized()
 {
 	Super::NativeOnInitialized();
+	//SetPromptText();
+}
 
-	auto MyCanvas = WidgetTree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass());
-
-	if (MyCanvas)
-	{
-		auto TextBlock = WidgetTree->ConstructWidget<UTextBlock>();
-		MyCanvas->AddChild(TextBlock);
-		const auto tempSlot = Cast<UCanvasPanelSlot>(TextBlock->Slot);
-		if (tempSlot)
-		{
-			tempSlot->SetAutoSize(true);
-			tempSlot->SetOffsets(FMargin(0, 0));
-			tempSlot->SetAnchors(FAnchors(0.5f, 0.5f));
-		}
-		WidgetTree->RootWidget = MyCanvas;
-	}
+void UInteractionPromptWidget::SetPromptText()
+{
+	FFormatNamedArguments Args;
+	Args.Add(TEXT("InteractType"), InteractionType);
+	FText prompt = FText::Format(LOCTEXT("InteractPrompt", "Press 'E' to {InteractType}"), Args);
+	InteractText->SetText(prompt);
 }
