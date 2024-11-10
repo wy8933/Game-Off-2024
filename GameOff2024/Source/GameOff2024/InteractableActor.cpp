@@ -51,7 +51,7 @@ void AInteractableActor::Tick(float DeltaTime)
 
 }
 
-void AInteractableActor::Interact()
+void AInteractableActor::Interact(AGameOff2024Character* interactor)
 {
 	DisableInteractPrompt();
 	Destroy();

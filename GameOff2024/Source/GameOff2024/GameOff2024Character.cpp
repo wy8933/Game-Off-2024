@@ -12,6 +12,8 @@
 #include "Engine/LocalPlayer.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "InteractableActor.h"
+#include "Inventory.h"
+#include "Components/WidgetComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -37,13 +39,30 @@ AGameOff2024Character::AGameOff2024Character()
 	Mesh1P->CastShadow = false;
 	//Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
-
 }
 
 void AGameOff2024Character::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+
+	Inventory = NewObject<UInventory>((UObject*)GetTransientPackage(), UInventory::StaticClass());
+
+	SetUpHUD();
+}
+
+void AGameOff2024Character::SetUpHUD()
+{
+
+	UWidgetComponent* widget = GetComponentByClass<UWidgetComponent>();
+
+	if (widget)
+	{
+		AmmoHUD = Cast<UAmmoHUDWidget>(widget->GetUserWidgetObject());
+
+		Inventory->OnAmmoChanged.AddDynamic(AmmoHUD, &UAmmoHUDWidget::UpdateHUD);
+	}
+
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
@@ -137,7 +156,7 @@ void AGameOff2024Character::Interact(const FInputActionValue& Value)
 {
 	if (targetInteractable != nullptr)
 	{
-		targetInteractable->Interact();
+		targetInteractable->Interact(this);
 	}
 }
 

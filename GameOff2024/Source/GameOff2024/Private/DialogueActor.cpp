@@ -40,7 +40,7 @@ void ADialogueActor::BeginPlay()
     }
 }
 
-void ADialogueActor::Interact()
+void ADialogueActor::Interact(AGameOff2024Character* interactor)
 {
     if (GEngine)
     {

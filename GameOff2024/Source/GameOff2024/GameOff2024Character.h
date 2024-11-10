@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
+#include "AmmoHUDWidget.h"
 #include "GameOff2024Character.generated.h"
 
 class UInputComponent;
@@ -80,6 +81,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
 
+	UPROPERTY(BlueprintReadOnly, Category = Inventory)
+	class UInventory* Inventory;
+
+	class UAmmoHUDWidget* AmmoHUD;
+
 protected:
 	/** Called for movement input */
 	void Move(const FInputActionValue& Value);
@@ -96,6 +102,8 @@ protected:
 
 	/** Called for Interact input*/
 	void Interact(const FInputActionValue& Value);
+
+	void SetUpHUD();
 
 protected:
 	// APawn interface
