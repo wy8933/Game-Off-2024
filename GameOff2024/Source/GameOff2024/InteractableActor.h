@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "InteractionPromptWidget.h"
+#include "GameOff2024Character.h"
 #include "InteractableActor.generated.h"
 
 UCLASS(BlueprintType)
@@ -33,7 +34,7 @@ public:
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	virtual void Interact();
+	virtual void Interact(AGameOff2024Character* interactor);
 	virtual void EnableInteractPrompt();
 	virtual void DisableInteractPrompt();
 };

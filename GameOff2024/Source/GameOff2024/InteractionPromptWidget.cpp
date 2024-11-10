@@ -2,8 +2,6 @@
 
 #include "InteractionPromptWidget.h"
 #include "Blueprint/WidgetTree.h"
-#include "Components/CanvasPanel.h"
-#include "Components/CanvasPanelSlot.h"
 #include "Components/TextBlock.h"
 
 #define LOCTEXT_NAMESPACE "InteractPrompt"
