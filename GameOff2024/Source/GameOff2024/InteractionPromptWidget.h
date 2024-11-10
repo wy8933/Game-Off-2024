@@ -15,10 +15,15 @@ class GAMEOFF2024_API UInteractionPromptWidget : public UUserWidget
 public:
 
 	virtual void NativeOnInitialized() override;
+	virtual void NativeConstruct() override;
+
+	virtual void SetPromptText();
+
+	FText InteractionType = FText::FromString("Interact");
 
 private:
 	
 	UPROPERTY(meta = (BindWidget))
-	class UTextBlock* interactText;
+	class UTextBlock* InteractText;
 
 };

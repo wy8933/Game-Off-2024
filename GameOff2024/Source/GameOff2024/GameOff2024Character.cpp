@@ -173,21 +173,25 @@ void AGameOff2024Character::GetInteractableTarget()
 		if (actor->GetClass()->IsChildOf(AInteractableActor::StaticClass()))
 		{
 			interactableActor = (AInteractableActor*)actor;
-			if (targetInteractable != interactableActor)
-			{
-				targetInteractable = interactableActor;
 
-				if (interactableActor != nullptr)
-				{
-					//enable interaction prompt
-					interactableActor->EnableInteractPrompt();
-				}
-				else
-				{
-					// disable interaction prompt
-					interactableActor->DisableInteractPrompt();
-				}
-			}
+		}
+	}
+
+	if (targetInteractable != interactableActor)
+	{
+
+		if (targetInteractable != nullptr)
+		{
+			//disable previous interaction prompt
+			targetInteractable->DisableInteractPrompt();
+		}
+
+		targetInteractable = interactableActor;
+
+		if (targetInteractable != nullptr)
+		{
+			//enable new interaction prompt
+			targetInteractable->EnableInteractPrompt();
 		}
 	}
 }

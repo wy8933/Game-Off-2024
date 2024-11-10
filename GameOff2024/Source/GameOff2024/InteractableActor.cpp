@@ -28,8 +28,19 @@ void AInteractableActor::BeginPlay()
 {
 	Super::BeginPlay();
 
-	InteractPrompt = CreateWidget<UInteractionPromptWidget>(GetWorld()->GetFirstPlayerController(), UInteractionPromptWidget::StaticClass(), "Interaction Prompt");
-	InteractPrompt->AddToViewport();
+	UWidgetComponent* widget = GetComponentByClass<UWidgetComponent>();
+
+	if (widget)
+	{
+		InteractPrompt = Cast<UInteractionPromptWidget>(widget->GetUserWidgetObject());
+		DisableInteractPrompt();
+	}
+
+	InteractPrompt->InteractionType = InteractionType;
+	InteractPrompt->SetPromptText();
+
+	//InteractPrompt = CreateWidget<UInteractionPromptWidget>(GetWorld()->GetFirstPlayerController(), UInteractionPromptWidget::StaticClass(), "Interaction Prompt");
+	//InteractPrompt->AddToViewport();
 	//DisableInteractPrompt();
 }
 
