@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "InteractionPromptWidget.h"
+#include "GameOff2024Character.h"
 #include "InteractableActor.generated.h"
 
 UCLASS(BlueprintType)
@@ -12,8 +13,9 @@ class GAMEOFF2024_API AInteractableActor : public AActor
 {
 	GENERATED_BODY()
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* VisualMesh;
+
 
 public:	
 	// Sets default values for this actor's properties
@@ -33,7 +35,7 @@ public:
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	virtual void Interact();
+	virtual void Interact(AGameOff2024Character* interactor);
 	virtual void EnableInteractPrompt();
 	virtual void DisableInteractPrompt();
 };

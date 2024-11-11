@@ -16,7 +16,7 @@ public:
     ADialogueActor();
 
     // Called when the actor is interacted with
-    virtual void Interact() override;
+    virtual void Interact(AGameOff2024Character* interactor) override;
 
 protected:
     virtual void BeginPlay() override;

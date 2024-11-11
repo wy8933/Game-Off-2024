@@ -1,12 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Test.h"
+#include "PlayerHUD.h"
 
-Test::Test()
+void APlayerHUD::BeginPlay()
 {
-}
+	Super::BeginPlay();
 
-Test::~Test()
-{
+
 }

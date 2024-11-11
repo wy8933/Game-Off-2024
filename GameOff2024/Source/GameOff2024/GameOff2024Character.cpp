@@ -12,6 +12,9 @@
 #include "Engine/LocalPlayer.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "InteractableActor.h"
+#include "Inventory.h"
+#include "PlayerHUD.h"
+#include "Components/WidgetComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -37,13 +40,71 @@ AGameOff2024Character::AGameOff2024Character()
 	Mesh1P->CastShadow = false;
 	//Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
-
 }
 
 void AGameOff2024Character::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+
+	Inventory = NewObject<UInventory>((UObject*)GetTransientPackage(), UInventory::StaticClass());
+
+	SetUpHUD();
+}
+
+void AGameOff2024Character::TakeDamage(int Amount)
+{
+	CurrentHealth -= Amount;
+
+	if (CurrentHealth <= 0)
+	{
+		//Death
+	}
+
+	OnHealthChanged.Broadcast(CurrentHealth, MaxHealth);
+}
+
+/// <summary>
+/// Returns false if the player is already at full health
+/// </summary>
+/// <param name="Amount">The amount of health to restore</param>
+/// <returns>bool</returns>
+bool AGameOff2024Character::TryRestoreHealth(int Amount)
+{
+	if (CurrentHealth >= MaxHealth)
+	{
+		return false;
+	}
+
+	CurrentHealth += Amount;
+
+	if (CurrentHealth >= MaxHealth)
+	{
+		CurrentHealth = MaxHealth;
+	}
+
+	OnHealthChanged.Broadcast(CurrentHealth, MaxHealth);
+	
+	return true;
+}
+
+///////////////////////////////////////////////////////////////////////////// HUD
+
+void AGameOff2024Character::SetUpHUD()
+{
+
+	APlayerHUD* HUD = Cast<APlayerHUD>(GetWorld()->GetFirstPlayerController()->GetHUD());
+
+	if (HUD)
+	{
+		AmmoHUD = HUD->AmmoHUD;
+
+		Inventory->OnAmmoChanged.AddDynamic(AmmoHUD, &UAmmoHUDWidget::UpdateHUD);
+
+		HealthHUD = HUD->HealthHUD;
+
+		this -> OnHealthChanged.AddDynamic(HealthHUD, &UHealthHUDWidget::UpdateHUD);
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
@@ -137,7 +198,7 @@ void AGameOff2024Character::Interact(const FInputActionValue& Value)
 {
 	if (targetInteractable != nullptr)
 	{
-		targetInteractable->Interact();
+		targetInteractable->Interact(this);
 	}
 }
 
