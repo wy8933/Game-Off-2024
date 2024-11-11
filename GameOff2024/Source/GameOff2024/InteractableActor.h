@@ -13,8 +13,9 @@ class GAMEOFF2024_API AInteractableActor : public AActor
 {
 	GENERATED_BODY()
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* VisualMesh;
+
 
 public:	
 	// Sets default values for this actor's properties
