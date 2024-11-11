@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
 #include "AmmoHUDWidget.h"
+#include "HealthHUDWidget.h"
 #include "GameOff2024Character.generated.h"
 
 class UInputComponent;
@@ -16,6 +17,8 @@ class UInputMappingContext;
 struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnHealthChanged, int, CurrentHealth, int, MaxHealth);
 
 UCLASS(config=Game)
 class AGameOff2024Character : public ACharacter
@@ -75,6 +78,12 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Interaction")
 	float MaxInteractionRange = 300.0f;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Health")
+	int MaxHealth = 100;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Health")
+	int CurrentHealth = 100;
+
 public:
 		
 	/** Look Input Action */
@@ -85,6 +94,7 @@ public:
 	class UInventory* Inventory;
 
 	class UAmmoHUDWidget* AmmoHUD;
+	class UHealthHUDWidget* HealthHUD;
 
 protected:
 	/** Called for movement input */
@@ -119,5 +129,13 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintCallable)
+	void TakeDamage(int Amount);
+
+	UFUNCTION(BlueprintCallable)
+	bool TryRestoreHealth(int Amount);
+
+	UPROPERTY(BlueprintAssignable)
+	FOnHealthChanged OnHealthChanged;
 };
 

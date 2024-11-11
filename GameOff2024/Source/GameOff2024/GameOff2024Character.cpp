@@ -13,6 +13,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "InteractableActor.h"
 #include "Inventory.h"
+#include "PlayerHUD.h"
 #include "Components/WidgetComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
@@ -51,18 +52,59 @@ void AGameOff2024Character::BeginPlay()
 	SetUpHUD();
 }
 
+void AGameOff2024Character::TakeDamage(int Amount)
+{
+	CurrentHealth -= Amount;
+
+	if (CurrentHealth <= 0)
+	{
+		//Death
+	}
+
+	OnHealthChanged.Broadcast(CurrentHealth, MaxHealth);
+}
+
+/// <summary>
+/// Returns false if the player is already at full health
+/// </summary>
+/// <param name="Amount">The amount of health to restore</param>
+/// <returns>bool</returns>
+bool AGameOff2024Character::TryRestoreHealth(int Amount)
+{
+	if (CurrentHealth >= MaxHealth)
+	{
+		return false;
+	}
+
+	CurrentHealth += Amount;
+
+	if (CurrentHealth >= MaxHealth)
+	{
+		CurrentHealth = MaxHealth;
+	}
+
+	OnHealthChanged.Broadcast(CurrentHealth, MaxHealth);
+	
+	return true;
+}
+
+///////////////////////////////////////////////////////////////////////////// HUD
+
 void AGameOff2024Character::SetUpHUD()
 {
 
-	UWidgetComponent* widget = GetComponentByClass<UWidgetComponent>();
+	APlayerHUD* HUD = Cast<APlayerHUD>(GetWorld()->GetFirstPlayerController()->GetHUD());
 
-	if (widget)
+	if (HUD)
 	{
-		AmmoHUD = Cast<UAmmoHUDWidget>(widget->GetUserWidgetObject());
+		AmmoHUD = HUD->AmmoHUD;
 
 		Inventory->OnAmmoChanged.AddDynamic(AmmoHUD, &UAmmoHUDWidget::UpdateHUD);
-	}
 
+		HealthHUD = HUD->HealthHUD;
+
+		this -> OnHealthChanged.AddDynamic(HealthHUD, &UHealthHUDWidget::UpdateHUD);
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
