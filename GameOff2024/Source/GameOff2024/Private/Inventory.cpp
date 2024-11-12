@@ -29,3 +29,33 @@ int UInventory::TryAddAmmo(int amount)
 		return leftoverAmmo;
 	}
 }
+
+bool UInventory::TryAddHealthItem()
+{
+	if (HealthItemsCarried >= MaxHealthItems)
+	{
+		return false;
+	}
+
+	HealthItemsCarried += 1;
+
+	OnHealthItemsChanged.Broadcast(HealthItemsCarried);
+
+	return true;
+}
+
+bool UInventory::TryRemoveHealthItem()
+{
+	if (HealthItemsCarried > 0)
+	{
+		HealthItemsCarried -= 1;
+		
+		OnHealthItemsChanged.Broadcast(HealthItemsCarried);
+
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}

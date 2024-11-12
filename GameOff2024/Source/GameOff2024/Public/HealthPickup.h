@@ -15,9 +15,7 @@ class GAMEOFF2024_API AHealthPickup : public AInteractableActor
 	GENERATED_BODY()
 	
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
-	int HealthRestoreAmount = 50;
-
+	static const int HealthRestoreAmount = 50;
 
 	virtual void Interact(AGameOff2024Character* interactor) override;
 };
