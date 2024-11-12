@@ -3,6 +3,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Engine/Engine.h"
 #include "Blueprint/UserWidget.h"
+#include "Components/AudioComponent.h"
 
 ADialogueActor::ADialogueActor()
 {
@@ -11,6 +12,11 @@ ADialogueActor::ADialogueActor()
     CurrentNodeID = 0;
     DialogueWidgetInstance = nullptr;
     bIsDialogueActive = false;
+
+    // Create the audio component
+    DialogueAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("DialogueAudioComponent"));
+    DialogueAudioComponent->bAutoActivate = false; // Do not auto-play
+    DialogueAudioComponent->OnAudioFinished.AddDynamic(this, &ADialogueActor::OnDialogueAudioFinished);
 }
 
 void ADialogueActor::BeginPlay()
@@ -28,12 +34,6 @@ void ADialogueActor::BeginPlay()
         }
     }
 
-    // Load data table if not set
-    if (!DialogueDataTable)
-    {
-        DialogueDataTable = LoadObject<UDataTable>(nullptr, TEXT("/Game/Data/DT_DialogueTreeData.DT_DialogueTreeData"));
-    }
-
     if (DialogueDataTable == nullptr && GEngine)
     {
         GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Dialogue DataTable is not set or failed to load!"));
@@ -49,26 +49,48 @@ void ADialogueActor::Interact(AGameOff2024Character* interactor)
 
     if (DialogueDataTable && DialogueWidgetInstance)
     {
-        UDialogue* DialogueWidget = Cast<UDialogue>(DialogueWidgetInstance);
-        if (DialogueWidget)
-        {
-            bIsDialogueActive = true;
-            FDialogueNode CurrentNode = GetCurrentDialogueNode();
-
-            // Display the current node's text in the dialogue widget
-            DialogueWidget->SetVisibility(ESlateVisibility::Visible);
-            DialogueWidget->UpdateDialogue(CurrentNode.SpeakerName, CurrentNode.DialogueText);
-
-            // Move to the next node
-            ProgressToNextNode();
-        }
-        FDialogueNode CurrentNode = GetCurrentDialogueNode();
-        if (CurrentNode.DialogueAudio)
-        {
-            UGameplayStatics::PlaySound2D(GetWorld(), CurrentNode.DialogueAudio);
-        }
+        StartDialogue();
     }
 }
+
+/// <summary>
+/// Start play the dialogue
+/// </summary>
+void ADialogueActor::StartDialogue()
+{
+    bIsDialogueActive = true;
+    CurrentNodeID = 0;
+    DisplayCurrentNode();
+}
+
+/// <summary>
+/// Display the subtitle for current dialogue and play the audio
+/// </summary>
+void ADialogueActor::DisplayCurrentNode()
+{
+    FDialogueNode CurrentNode = GetCurrentDialogueNode();
+
+    // Show the dialogue widget and update the text
+    if (DialogueWidgetInstance)
+    {
+        DialogueWidgetInstance->SetVisibility(ESlateVisibility::Visible);
+        UDialogue* DialogueWidget = Cast<UDialogue>(DialogueWidgetInstance);
+        DialogueWidget->UpdateDialogue(CurrentNode.SpeakerName, CurrentNode.DialogueText);
+    }
+
+    // Play the audio for the current node, if available
+    if (CurrentNode.DialogueAudio && DialogueAudioComponent)
+    {
+        DialogueAudioComponent->SetSound(CurrentNode.DialogueAudio);
+        DialogueAudioComponent->Play();
+    }
+    else
+    {
+        OnDialogueAudioFinished();
+    }
+}
+
+
 /// <summary>
 /// Get the current node for Dialogue
 /// </summary>
@@ -110,16 +132,38 @@ FDialogueNode ADialogueActor::GetCurrentDialogueNode()
 void ADialogueActor::ProgressToNextNode()
 {
     FDialogueNode CurrentNode = GetCurrentDialogueNode();
-    if (CurrentNodeID != -1)
+    CurrentNodeID = CurrentNode.NextNodeID;
+
+    // Check if end of the dialogue is reached
+    if (CurrentNodeID == -1)
     {
-        CurrentNodeID = CurrentNode.NextNodeID;
+        EndDialogue();
     }
     else
     {
-        if (DialogueWidgetInstance)
-        {
-            DialogueWidgetInstance->SetVisibility(ESlateVisibility::Hidden);
-            bIsDialogueActive = false;
-        }
+        DisplayCurrentNode();
+    }
+}
+
+void ADialogueActor::OnDialogueAudioFinished()
+{
+    ProgressToNextNode();
+}
+
+/// <summary>
+/// End the current dialogue
+/// </summary>
+void ADialogueActor::EndDialogue()
+{
+    if (DialogueWidgetInstance)
+    {
+        DialogueWidgetInstance->SetVisibility(ESlateVisibility::Hidden);
+    }
+    bIsDialogueActive = false;
+
+    // Unbind the delegate to avoid calling it after the dialogue ends
+    if (DialogueAudioComponent)
+    {
+        DialogueAudioComponent->OnAudioFinished.RemoveDynamic(this, &ADialogueActor::OnDialogueAudioFinished);
     }
 }
