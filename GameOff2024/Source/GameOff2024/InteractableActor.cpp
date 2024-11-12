@@ -36,19 +36,17 @@ void AInteractableActor::BeginPlay()
 		DisableInteractPrompt();
 	}
 
-	InteractPrompt->InteractionType = InteractionType;
-	InteractPrompt->SetPromptText();
-
-	//InteractPrompt = CreateWidget<UInteractionPromptWidget>(GetWorld()->GetFirstPlayerController(), UInteractionPromptWidget::StaticClass(), "Interaction Prompt");
-	//InteractPrompt->AddToViewport();
-	//DisableInteractPrompt();
+	if (InteractPrompt)
+	{
+		InteractPrompt->InteractionType = InteractionType;
+		InteractPrompt->SetPromptText();
+	}
 }
 
 // Called every frame
 void AInteractableActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 void AInteractableActor::Interact(AGameOff2024Character* interactor)
@@ -59,10 +57,16 @@ void AInteractableActor::Interact(AGameOff2024Character* interactor)
 
 void AInteractableActor::EnableInteractPrompt()
 {
-	InteractPrompt->SetVisibility(ESlateVisibility::Visible);
+	if (InteractPrompt)
+	{
+		InteractPrompt->SetVisibility(ESlateVisibility::Visible);
+	}
 }
 
 void AInteractableActor::DisableInteractPrompt()
 {
-	InteractPrompt->SetVisibility(ESlateVisibility::Hidden);
+	if (InteractPrompt)
+	{
+		InteractPrompt->SetVisibility(ESlateVisibility::Hidden);
+	}
 }
