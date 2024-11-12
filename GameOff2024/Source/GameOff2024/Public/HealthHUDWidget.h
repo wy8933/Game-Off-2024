@@ -17,9 +17,13 @@ class GAMEOFF2024_API UHealthHUDWidget : public UUserWidget
 public:
 
 	UFUNCTION()
-	void UpdateHUD(int CurrentHealth, int MaxHealth);
+	void UpdateHUDHealthBar(int CurrentHealth, int MaxHealth);
+	UFUNCTION()
+	void UpdateHUDHealthItemsCarried(int CurrentHealthItemsCarried);
 
 private:
 	UPROPERTY(meta = (BindWidget))
 	class UProgressBar* HealthBar;
+	UPROPERTY(meta = (BindWidget))
+	class UTextBlock* HealthItemsCarriedText;
 };
