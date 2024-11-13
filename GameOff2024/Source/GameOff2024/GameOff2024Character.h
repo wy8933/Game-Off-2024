@@ -59,6 +59,9 @@ class AGameOff2024Character : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* CrouchAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* UseHealthItemAction;
+
 public:
 	AGameOff2024Character();
 
@@ -112,6 +115,8 @@ protected:
 
 	/** Called for Interact input*/
 	void Interact(const FInputActionValue& Value);
+
+	void UseHealthItem(const FInputActionValue& Value);
 
 	void SetUpHUD();
 

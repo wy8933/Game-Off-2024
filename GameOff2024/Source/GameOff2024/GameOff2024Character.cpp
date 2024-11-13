@@ -14,6 +14,7 @@
 #include "InteractableActor.h"
 #include "Inventory.h"
 #include "PlayerHUD.h"
+#include "HealthPickup.h"
 #include "Components/WidgetComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
@@ -71,6 +72,7 @@ void AGameOff2024Character::TakeDamage(int Amount)
 /// <returns>bool</returns>
 bool AGameOff2024Character::TryRestoreHealth(int Amount)
 {
+
 	if (CurrentHealth >= MaxHealth)
 	{
 		return false;
@@ -84,7 +86,7 @@ bool AGameOff2024Character::TryRestoreHealth(int Amount)
 	}
 
 	OnHealthChanged.Broadcast(CurrentHealth, MaxHealth);
-	
+
 	return true;
 }
 
@@ -103,7 +105,8 @@ void AGameOff2024Character::SetUpHUD()
 
 		HealthHUD = HUD->HealthHUD;
 
-		this -> OnHealthChanged.AddDynamic(HealthHUD, &UHealthHUDWidget::UpdateHUD);
+		this -> OnHealthChanged.AddDynamic(HealthHUD, &UHealthHUDWidget::UpdateHUDHealthBar);
+		Inventory->OnHealthItemsChanged.AddDynamic(HealthHUD, &UHealthHUDWidget::UpdateHUDHealthItemsCarried);
 	}
 }
 
@@ -133,6 +136,9 @@ void AGameOff2024Character::SetupPlayerInputComponent(UInputComponent* PlayerInp
 
 		//Interacting
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &AGameOff2024Character::Interact);
+
+		//UsingHealhtItems
+		EnhancedInputComponent->BindAction(UseHealthItemAction, ETriggerEvent::Started, this, &AGameOff2024Character::UseHealthItem);
 	}
 	else
 	{
@@ -199,6 +205,18 @@ void AGameOff2024Character::Interact(const FInputActionValue& Value)
 	if (targetInteractable != nullptr)
 	{
 		targetInteractable->Interact(this);
+	}
+}
+
+void AGameOff2024Character::UseHealthItem(const FInputActionValue& Value)
+{
+	if (Inventory->HealthItemsCarried > 0)
+	{
+		if (TryRestoreHealth(AHealthPickup::HealthRestoreAmount))
+		{
+			Inventory->TryRemoveHealthItem();
+			Inventory->OnHealthItemsChanged.Broadcast(Inventory->HealthItemsCarried);
+		}
 	}
 }
 
