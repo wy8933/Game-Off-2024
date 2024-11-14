@@ -95,10 +95,32 @@ bool AGameOff2024Character::TryRestoreHealth(int Amount)
 void AGameOff2024Character::SetUpHUD()
 {
 
-	APlayerHUD* HUD = Cast<APlayerHUD>(GetWorld()->GetFirstPlayerController()->GetHUD());
+	APlayerController* PlayerController = GetWorld() ? GetWorld()->GetFirstPlayerController() : nullptr;
+	if (!PlayerController)
+	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Failed to get Player Controller"));
+		}
+		return;
+	}
+
+	APlayerHUD* HUD = Cast<APlayerHUD>(PlayerController->GetHUD());
+	if (!HUD)
+	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Failed to cast HUD to APlayerHUD"));
+		}
+		return;
+	}
 
 	if (HUD)
 	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Succefully created HUD"));
+		}
 		AmmoHUD = HUD->AmmoHUD;
 
 		Inventory->OnAmmoChanged.AddDynamic(AmmoHUD, &UAmmoHUDWidget::UpdateHUD);

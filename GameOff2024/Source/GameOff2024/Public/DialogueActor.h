@@ -31,15 +31,28 @@ protected:
 
     // The class of the dialogue widget to display
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
-    TSubclassOf<UDialogue> DialogueWidgetClass;
+    TSubclassOf<UUserWidget> DialogueWidgetClass;
 
+    // Audio component to play dialogue audio
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Dialogue")
+    UAudioComponent* DialogueAudioComponent;
+
+    // Indicate if dialogue is active
     UPROPERTY(BlueprintReadOnly, Category = "Dialogue")
     bool bIsDialogueActive;
+
 private:
     // The instance of the dialogue widget
     UDialogue* DialogueWidgetInstance;
 
     // Helper functions for dialogue progression
     FDialogueNode GetCurrentDialogueNode();
+    void StartDialogue();
+    void DisplayCurrentNode();
     void ProgressToNextNode();
+    void EndDialogue();
+
+    // Callback for when dialogue audio finishes
+    UFUNCTION()
+    void OnDialogueAudioFinished();
 };
