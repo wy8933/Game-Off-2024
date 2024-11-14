@@ -59,3 +59,38 @@ bool UInventory::TryRemoveHealthItem()
 		return false;
 	}
 }
+
+bool UInventory::TryAddBottleItem()
+{
+	if (BottlesCarried >= MaxBottles)
+	{
+		return false;
+	}
+
+	BottlesCarried += 1;
+
+	OnBottlesCarriedChanged.Broadcast(BottlesCarried);
+
+	return true;
+}
+
+bool UInventory::TryReloadWeapon()
+{
+	if (CurrentAmmo <= AmmoInClip)
+	{
+		return false;
+	}
+	
+	if (CurrentAmmo < AmmoClipSize)
+	{
+		AmmoInClip = CurrentAmmo;
+	}
+	else
+	{
+		AmmoInClip = AmmoClipSize;
+	}
+
+	OnAmmoChanged.Broadcast(CurrentAmmo, AmmoClipSize, AmmoInClip);
+
+	return true;
+}
