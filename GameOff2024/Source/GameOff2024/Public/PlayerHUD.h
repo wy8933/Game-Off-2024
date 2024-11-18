@@ -6,6 +6,7 @@
 #include "GameFramework/HUD.h"
 #include "AmmoHUDWidget.h"
 #include "HealthHUDWidget.h"
+#include "BottlesHUDWidget.h"
 #include "PlayerHUD.generated.h"
 
 /**
@@ -23,7 +24,9 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 	UHealthHUDWidget* HealthHUD;
 
+	UPROPERTY(BlueprintReadWrite)
+	UBottlesHUDWidget* BottlesHUD;
+
 protected:
 	virtual void BeginPlay() override;
-
 };

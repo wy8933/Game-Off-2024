@@ -7,7 +7,11 @@
 #include "Logging/LogMacros.h"
 #include "AmmoHUDWidget.h"
 #include "HealthHUDWidget.h"
+#include "BottlesHUDWidget.h"
+#include "ToolActor.h"
+#include "PlayerLight.h"
 #include "GameOff2024Character.generated.h"
+
 
 class UInputComponent;
 class USkeletalMeshComponent;
@@ -59,8 +63,38 @@ class AGameOff2024Character : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* CrouchAction;
 
+	/** Heal Input Action*/
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* UseHealthItemAction;
+
+	/** Swap Tool Input Actions */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* SwapToGunAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* SwapToMagnifierAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* SwapToBottleAction;
+
+	/** Light Source Input Actions*/
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* SwapLightSourceAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* ToggleLightAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* ChargeLightAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* AimAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* UseToolAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* ReloadWeaponAction;
 
 public:
 	AGameOff2024Character();
@@ -87,6 +121,27 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Health")
 	int CurrentHealth = 100;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tools")
+	AToolActor* CurrentActiveTool;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Tools")
+	AToolActor* Gun;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Tools")
+	AToolActor* Magnifier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Tools")
+	AToolActor* Bottle;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Light Sources")
+	APlayerLight* CurrentActiveLight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Light Sources")
+	APlayerLight* Flashlight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Light Sources")
+	APlayerLight* Lighter;
+
 public:
 		
 	/** Look Input Action */
@@ -98,6 +153,7 @@ public:
 
 	class UAmmoHUDWidget* AmmoHUD;
 	class UHealthHUDWidget* HealthHUD;
+	class UBottlesHUDWidget* BottlesHUD;
 
 protected:
 	/** Called for movement input */
@@ -116,8 +172,27 @@ protected:
 	/** Called for Interact input*/
 	void Interact(const FInputActionValue& Value);
 
+	/** Called for healing input*/
 	void UseHealthItem(const FInputActionValue& Value);
 
+	/** Called for swapping tools*/
+	void SwapToolGun(const FInputActionValue& Value);
+	void SwapToolMagnifier(const FInputActionValue& Value);
+	void SwapToolBottle(const FInputActionValue& Value);
+
+	/** Called for light source actions*/
+	void SwapLightSource(const FInputActionValue& Value);
+	void ToggleLight(const FInputActionValue& Value);
+	void ChargeLight(const FInputActionValue& Value);
+
+	/** Called for aiming and using active tool*/
+	void UseTool(const FInputActionValue& Value);
+	void Aim(const FInputActionValue& Value);
+	
+	/** Called for gun reload action*/
+	void ReloadWeapon(const FInputActionValue& Value);
+
+	//Sets Up Hud
 	void SetUpHUD();
 
 protected:
