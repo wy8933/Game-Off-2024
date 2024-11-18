@@ -6,7 +6,7 @@
 
 void AHealthPickup::Interact(AGameOff2024Character* Interactor)
 {
-	bool canRestore = false;
+	//bool canRestore = false;
 
 	//canRestore = Interactor -> TryRestoreHealth(HealthRestoreAmount);
 
