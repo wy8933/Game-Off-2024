@@ -50,6 +50,8 @@ void AGameOff2024Character::BeginPlay()
 
 	Inventory = NewObject<UInventory>((UObject*)GetTransientPackage(), UInventory::StaticClass());
 
+	
+
 	SetUpHUD();
 }
 
@@ -123,12 +125,25 @@ void AGameOff2024Character::SetUpHUD()
 		}
 		AmmoHUD = HUD->AmmoHUD;
 
-		Inventory->OnAmmoChanged.AddDynamic(AmmoHUD, &UAmmoHUDWidget::UpdateHUD);
+		if (AmmoHUD)
+		{
+			Inventory->OnAmmoChanged.AddDynamic(AmmoHUD, &UAmmoHUDWidget::UpdateHUD);
+		}
 
 		HealthHUD = HUD->HealthHUD;
 
-		this -> OnHealthChanged.AddDynamic(HealthHUD, &UHealthHUDWidget::UpdateHUDHealthBar);
-		Inventory->OnHealthItemsChanged.AddDynamic(HealthHUD, &UHealthHUDWidget::UpdateHUDHealthItemsCarried);
+		if (HealthHUD)
+		{
+			this->OnHealthChanged.AddDynamic(HealthHUD, &UHealthHUDWidget::UpdateHUDHealthBar);
+			Inventory->OnHealthItemsChanged.AddDynamic(HealthHUD, &UHealthHUDWidget::UpdateHUDHealthItemsCarried);
+		}
+
+		BottlesHUD = HUD->BottlesHUD;
+
+		if (BottlesHUD)
+		{
+			Inventory->OnBottlesCarriedChanged.AddDynamic(BottlesHUD, &UBottlesHUDWidget::UpdateHUD);
+		}
 	}
 }
 
@@ -159,14 +174,32 @@ void AGameOff2024Character::SetupPlayerInputComponent(UInputComponent* PlayerInp
 		//Interacting
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &AGameOff2024Character::Interact);
 
-		//UsingHealhtItems
+		//Using Healht Items
 		EnhancedInputComponent->BindAction(UseHealthItemAction, ETriggerEvent::Started, this, &AGameOff2024Character::UseHealthItem);
+
+		//Swapping Items
+		EnhancedInputComponent->BindAction(SwapToGunAction, ETriggerEvent::Started, this, &AGameOff2024Character::SwapToolGun);
+		EnhancedInputComponent->BindAction(SwapToMagnifierAction, ETriggerEvent::Started, this, &AGameOff2024Character::SwapToolMagnifier);
+		EnhancedInputComponent->BindAction(SwapToBottleAction, ETriggerEvent::Started, this, &AGameOff2024Character::SwapToolBottle);
+
+		//Light Actions
+		EnhancedInputComponent->BindAction(SwapLightSourceAction, ETriggerEvent::Started, this, &AGameOff2024Character::SwapLightSource);
+		EnhancedInputComponent->BindAction(ToggleLightAction, ETriggerEvent::Started, this, &AGameOff2024Character::ToggleLight);
+		EnhancedInputComponent->BindAction(ChargeLightAction, ETriggerEvent::Started, this, &AGameOff2024Character::ChargeLight);
+
+		//Using Tools
+		EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Started, this, &AGameOff2024Character::Aim);
+		EnhancedInputComponent->BindAction(UseToolAction, ETriggerEvent::Started, this, &AGameOff2024Character::UseTool);
+
+		//Weapon Reload
+		EnhancedInputComponent->BindAction(ReloadWeaponAction, ETriggerEvent::Started, this, &AGameOff2024Character::ReloadWeapon);
 	}
 	else
 	{
 		UE_LOG(LogTemplateCharacter, Error, TEXT("'%s' Failed to find an Enhanced Input Component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
 	}
 
+	//Set Walk Speed
 	WalkSpeed = CharacterMovement->MaxWalkSpeed;
 }
 
@@ -242,6 +275,144 @@ void AGameOff2024Character::UseHealthItem(const FInputActionValue& Value)
 	}
 }
 
+void AGameOff2024Character::SwapToolGun(const FInputActionValue& Value)
+{
+	if (!Gun)
+	{
+		return;
+	}
+
+	if (CurrentActiveTool != Gun)
+	{
+		if (CurrentActiveTool)
+		{
+			CurrentActiveTool->SetActive(false);
+		}
+		CurrentActiveTool = Gun;
+		CurrentActiveTool->SetActive(true);
+	}
+}
+
+void AGameOff2024Character::SwapToolMagnifier(const FInputActionValue& Value)
+{
+	if (!Magnifier)
+	{
+		return;
+	}
+
+	if (Inventory->HasMagnifier == false)
+	{
+		return;
+	}
+
+	if (CurrentActiveTool != Magnifier)
+	{
+		if (CurrentActiveTool)
+		{
+			CurrentActiveTool->SetActive(false);
+		}
+		CurrentActiveTool = Magnifier;
+		CurrentActiveTool->SetActive(true);
+	}
+}
+
+void AGameOff2024Character::SwapToolBottle(const FInputActionValue& Value)
+{
+	if (!Bottle)
+	{
+		return;
+	}
+
+	if (Inventory->BottlesCarried <= 0)
+	{
+		return;
+	}
+
+	if (CurrentActiveTool != Bottle)
+	{
+		if (CurrentActiveTool)
+		{
+			CurrentActiveTool->SetActive(false);
+		}
+		CurrentActiveTool = Bottle;
+		CurrentActiveTool->SetActive(true);
+	}
+}
+
+void AGameOff2024Character::SwapLightSource(const FInputActionValue& Value)
+{
+	if (CurrentActiveLight)
+	{
+		CurrentActiveLight->SetActive(false);
+	}
+
+	if (CurrentActiveLight != Flashlight)
+	{
+		if (Flashlight)
+		{
+			CurrentActiveLight = Flashlight;
+		}
+	}
+	else
+	{
+		if (Lighter)
+		{
+			CurrentActiveLight = Lighter;
+		}
+	}
+	CurrentActiveLight->SetActive(true);
+}
+
+void AGameOff2024Character::ToggleLight(const FInputActionValue& Value)
+{
+	if (CurrentActiveLight)
+	{
+		CurrentActiveLight->ToggleLight();
+	}
+}
+
+void AGameOff2024Character::ChargeLight(const FInputActionValue& Value)
+{
+	if (!Flashlight)
+	{
+		return;
+	}
+
+	if (CurrentActiveLight != Flashlight)
+	{
+		return;
+	}
+}
+
+void AGameOff2024Character::Aim(const FInputActionValue& Value)
+{
+
+}
+
+void AGameOff2024Character::UseTool(const FInputActionValue& Value)
+{
+	CurrentActiveTool->UseTool();
+}
+
+void AGameOff2024Character::ReloadWeapon(const FInputActionValue& Value)
+{
+	if (CurrentActiveTool != Gun)
+	{
+		return;
+	}
+
+	Inventory->TryReloadWeapon();
+}
+
+void AGameOff2024Character::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	GetInteractableTarget();
+}
+
+/////////////////////////////////////////////// Sub Functions
+
 void AGameOff2024Character::GetInteractableTarget()
 {
 	FVector CameraLocation = FirstPersonCameraComponent->GetComponentLocation();
@@ -295,11 +466,4 @@ void AGameOff2024Character::GetInteractableTarget()
 			targetInteractable->EnableInteractPrompt();
 		}
 	}
-}
-
-void AGameOff2024Character::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-	GetInteractableTarget();
 }
