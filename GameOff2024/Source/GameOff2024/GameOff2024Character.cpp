@@ -59,9 +59,33 @@ void AGameOff2024Character::TakeDamage(int Amount)
 {
 	CurrentHealth -= Amount;
 
+	//Death
 	if (CurrentHealth <= 0)
 	{
-		//Death
+		// Spawn and play the camera animation
+		if (CameraAnimationPlayerClass)
+		{
+			FTransform SpawnTransform = GetActorTransform();
+
+			AActor* CameraAnimationPlayer = GetWorld()->SpawnActor<AActor>(
+				CameraAnimationPlayerClass,
+				SpawnTransform
+			);
+
+			if (CameraAnimationPlayer)
+			{
+				// Call the Blueprint function "PlayDeathCameraAnimation"
+				UFunction* PlayAnimationFunction = CameraAnimationPlayer->FindFunction(TEXT("PlayDeathCameraAnimation"));
+				if (PlayAnimationFunction)
+				{
+					if (GEngine) {
+						GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, "Player is dead");
+					}
+
+					CameraAnimationPlayer->ProcessEvent(PlayAnimationFunction, nullptr);
+				}
+			}
+		}
 	}
 
 	OnHealthChanged.Broadcast(CurrentHealth, MaxHealth);
