@@ -96,6 +96,9 @@ class AGameOff2024Character : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* ReloadWeaponAction;
 
+	/* Animations */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AActor> CameraAnimationPlayerClass;
 
 public:
 	AGameOff2024Character();
