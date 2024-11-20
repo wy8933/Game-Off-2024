@@ -59,32 +59,14 @@ void AGameOff2024Character::TakeDamage(int Amount)
 {
 	CurrentHealth -= Amount;
 
+	if (GEngine) {
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "Player get hit");
+	}
 	//Death
 	if (CurrentHealth <= 0)
 	{
-		// Spawn and play the camera animation
-		if (CameraAnimationPlayerClass)
-		{
-			FTransform SpawnTransform = GetActorTransform();
-
-			AActor* CameraAnimationPlayer = GetWorld()->SpawnActor<AActor>(
-				CameraAnimationPlayerClass,
-				SpawnTransform
-			);
-
-			if (CameraAnimationPlayer)
-			{
-				// Call the Blueprint function PlayDeathCameraAnimation
-				UFunction* PlayAnimationFunction = CameraAnimationPlayer->FindFunction(TEXT("PlayDeathCameraAnimation"));
-				if (PlayAnimationFunction)
-				{
-					if (GEngine) {
-						GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, "Player is dead!!!!!!!!!");
-					}
-
-					CameraAnimationPlayer->ProcessEvent(PlayAnimationFunction, nullptr);
-				}
-			}
+		if (GEngine) {
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "Player HP is 0");
 		}
 	}
 
