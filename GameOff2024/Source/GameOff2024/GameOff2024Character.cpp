@@ -74,12 +74,12 @@ void AGameOff2024Character::TakeDamage(int Amount)
 
 			if (CameraAnimationPlayer)
 			{
-				// Call the Blueprint function "PlayDeathCameraAnimation"
+				// Call the Blueprint function PlayDeathCameraAnimation
 				UFunction* PlayAnimationFunction = CameraAnimationPlayer->FindFunction(TEXT("PlayDeathCameraAnimation"));
 				if (PlayAnimationFunction)
 				{
 					if (GEngine) {
-						GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, "Player is dead");
+						GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, "Player is dead!!!!!!!!!");
 					}
 
 					CameraAnimationPlayer->ProcessEvent(PlayAnimationFunction, nullptr);
