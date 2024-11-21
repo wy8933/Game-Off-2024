@@ -59,9 +59,15 @@ void AGameOff2024Character::TakeDamage(int Amount)
 {
 	CurrentHealth -= Amount;
 
+	if (GEngine) {
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "Player get hit");
+	}
+	//Death
 	if (CurrentHealth <= 0)
 	{
-		//Death
+		if (GEngine) {
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "Player HP is 0");
+		}
 	}
 
 	OnHealthChanged.Broadcast(CurrentHealth, MaxHealth);
