@@ -3,3 +3,7 @@
 
 #include "BottleToolActor.h"
 
+void ABottleToolActor::UseTool()
+{
+	
+}
