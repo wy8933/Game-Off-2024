@@ -124,22 +124,22 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tools")
 	AToolActor* CurrentActiveTool;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Tools")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tools")
 	AToolActor* Gun;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Tools")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tools")
 	AToolActor* Magnifier;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Tools")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tools")
 	AToolActor* Bottle;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Light Sources")
 	APlayerLight* CurrentActiveLight;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Light Sources")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Light Sources")
 	APlayerLight* Flashlight;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Light Sources")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Light Sources")
 	APlayerLight* Lighter;
 
 public:
