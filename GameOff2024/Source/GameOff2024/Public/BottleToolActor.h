@@ -14,4 +14,7 @@ class GAMEOFF2024_API ABottleToolActor : public AToolActor
 {
 	GENERATED_BODY()
 	
+
+public:
+	virtual void UseTool() override;
 };
