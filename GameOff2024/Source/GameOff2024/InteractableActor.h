@@ -13,10 +13,6 @@ class GAMEOFF2024_API AInteractableActor : public AActor
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere)
-	UStaticMeshComponent* VisualMesh;
-
-
 public:	
 	// Sets default values for this actor's properties
 	AInteractableActor();
@@ -26,12 +22,21 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere, Category = UI)
-	FText InteractionType = FText::FromString("Interact");
+		FText InteractionType = FText::FromString("Interact");
 
 public:	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+		UStaticMeshComponent* VisualMesh;
+
 	//Reference to the interaction prompt
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
-	UInteractionPromptWidget* InteractPrompt;
+		UInteractionPromptWidget* InteractPrompt;
+
+	UPROPERTY(EditAnywhere)
+		bool bInteractInBlueprints = false;
+
+	UFUNCTION(BlueprintImplementableEvent)
+		void InteractBP();
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
