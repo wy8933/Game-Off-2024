@@ -33,8 +33,8 @@ public:
 		UInteractionPromptWidget* InteractPrompt;
 
 	UPROPERTY(EditAnywhere)
-		bool bInteractInBlueprints = false;
-
+		bool bDestroyOnInteract = true;
+	
 	UFUNCTION(BlueprintImplementableEvent)
 		void InteractBP();
 

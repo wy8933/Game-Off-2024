@@ -51,12 +51,10 @@ void AInteractableActor::Tick(float DeltaTime)
 
 void AInteractableActor::Interact(AGameOff2024Character* interactor)
 {
-	if (!bInteractInBlueprints) {
+	InteractBP();
+	if (bDestroyOnInteract) {
 		DisableInteractPrompt();
 		Destroy();
-	}
-	else {
-		InteractBP();
 	}
 }
 
