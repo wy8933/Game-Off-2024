@@ -21,10 +21,10 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere, Category = UI)
+public:	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
 		FText InteractionType = FText::FromString("Interact");
 
-public:	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 		UStaticMeshComponent* VisualMesh;
 
@@ -37,6 +37,9 @@ public:
 	
 	UFUNCTION(BlueprintImplementableEvent)
 		void InteractBP();
+
+	UFUNCTION(BlueprintCallable)
+		void SetWidgetPromptText();
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

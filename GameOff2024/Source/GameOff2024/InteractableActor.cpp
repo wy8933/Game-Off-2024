@@ -36,17 +36,22 @@ void AInteractableActor::BeginPlay()
 		DisableInteractPrompt();
 	}
 
-	if (InteractPrompt)
-	{
-		InteractPrompt->InteractionType = InteractionType;
-		InteractPrompt->SetPromptText();
-	}
+	SetWidgetPromptText();
 }
 
 // Called every frame
 void AInteractableActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
+
+void AInteractableActor::SetWidgetPromptText()
+{
+	if (InteractPrompt)
+	{
+		InteractPrompt->InteractionType = InteractionType;
+		InteractPrompt->SetPromptText();
+	}
 }
 
 void AInteractableActor::Interact(AGameOff2024Character* interactor)
