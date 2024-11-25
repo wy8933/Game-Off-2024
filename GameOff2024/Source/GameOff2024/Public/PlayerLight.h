@@ -23,5 +23,5 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	void SetActive(bool active);
-	void ToggleLight();
+	void ToggleLight(bool value);
 };

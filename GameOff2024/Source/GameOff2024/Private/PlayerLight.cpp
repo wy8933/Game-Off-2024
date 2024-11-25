@@ -27,11 +27,12 @@ void APlayerLight::Tick(float DeltaTime)
 
 void APlayerLight::SetActive(bool Active)
 {
-	SetActorHiddenInGame(Active);
+	SetActorHiddenInGame(!Active);
 	SetActorTickEnabled(Active);
 }
 
-void APlayerLight::ToggleLight()
+void APlayerLight::ToggleLight(bool value)
 {
-
+	SetActorHiddenInGame(!value);
+	SetActorTickEnabled(value);
 }

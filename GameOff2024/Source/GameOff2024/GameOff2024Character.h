@@ -96,6 +96,8 @@ class AGameOff2024Character : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* ReloadWeaponAction;
 
+	bool LightSourceOn = true;
+
 public:
 	AGameOff2024Character();
 

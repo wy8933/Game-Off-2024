@@ -77,6 +77,10 @@ void AGameOff2024Character::BeginPlay()
 		}
 	}
 
+	if (Flashlight) {
+		CurrentActiveLight = Flashlight;
+	}
+
 	SetUpHUD();
 }
 
@@ -372,47 +376,44 @@ void AGameOff2024Character::SwapToolBottle(const FInputActionValue& Value)
 
 void AGameOff2024Character::SwapLightSource(const FInputActionValue& Value)
 {
+	LightSourceOn = true;
 	if (CurrentActiveLight)
 	{
 		CurrentActiveLight->SetActive(false);
-	}
 
-	if (CurrentActiveLight != Flashlight)
-	{
-		if (Flashlight)
+		if (Flashlight && CurrentActiveLight != Flashlight)
 		{
 			CurrentActiveLight = Flashlight;
 		}
-	}
-	else
-	{
-		if (Lighter)
+		else
 		{
-			CurrentActiveLight = Lighter;
+			if (Lighter)
+			{
+				CurrentActiveLight = Lighter;
+			}
 		}
+
+		CurrentActiveLight->SetActive(true);
 	}
-	CurrentActiveLight->SetActive(true);
 }
 
 void AGameOff2024Character::ToggleLight(const FInputActionValue& Value)
 {
+	LightSourceOn = !LightSourceOn;
 	if (CurrentActiveLight)
 	{
-		CurrentActiveLight->ToggleLight();
+		CurrentActiveLight->ToggleLight(LightSourceOn);
 	}
 }
 
 void AGameOff2024Character::ChargeLight(const FInputActionValue& Value)
 {
-	if (!Flashlight)
+	if (!Flashlight && CurrentActiveLight != Flashlight)
 	{
 		return;
 	}
 
-	if (CurrentActiveLight != Flashlight)
-	{
-		return;
-	}
+	LightSourceOn = true;
 }
 
 void AGameOff2024Character::Aim(const FInputActionValue& Value)
