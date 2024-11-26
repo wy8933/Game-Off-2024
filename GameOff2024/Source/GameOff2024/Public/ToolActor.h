@@ -10,6 +10,11 @@ UCLASS()
 class GAMEOFF2024_API AToolActor : public AActor
 {
 	GENERATED_BODY()
+
+
+	UPROPERTY(EditAnywhere)
+	UStaticMeshComponent* VisualMesh;
+
 	
 public:	
 	// Sets default values for this actor's properties
@@ -24,5 +29,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	virtual void UseTool();
 
+	UFUNCTION(BlueprintCallable)
 	void SetActive(bool active);
 };

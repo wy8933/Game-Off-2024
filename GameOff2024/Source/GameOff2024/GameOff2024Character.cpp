@@ -15,6 +15,9 @@
 #include "Inventory.h"
 #include "PlayerHUD.h"
 #include "HealthPickup.h"
+#include "BottleToolActor.h"
+#include "MagnifierToolActor.h"
+#include "GunToolActor.h"
 #include "Components/WidgetComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
@@ -50,7 +53,33 @@ void AGameOff2024Character::BeginPlay()
 
 	Inventory = NewObject<UInventory>((UObject*)GetTransientPackage(), UInventory::StaticClass());
 
+	TArray<AActor*> children;
+	this->GetAllChildActors(children);
+
+	//FirstPersonCameraComponent->GetChildrenComponents(true, children);//GetAllChildActors(children);
 	
+	for (int i = 0; i < children.Num(); i++)
+	{
+		if (children[i]->GetClass() == ABottleToolActor::StaticClass())
+		{
+			Bottle = Cast<ABottleToolActor>(children[i]);
+			Bottle->SetActive(false);
+		}
+		else if (children[i]->GetClass() == AMagnifierToolActor::StaticClass())
+		{
+			Magnifier = Cast<AMagnifierToolActor>(children[i]);
+			Magnifier->SetActive(false);
+		}
+		else if (children[i]->GetClass() == AGunToolActor::StaticClass())
+		{
+			Gun = Cast<AGunToolActor>(children[i]);
+			Gun->SetActive(false);
+		}
+	}
+
+	if (Flashlight) {
+		CurrentActiveLight = Flashlight;
+	}
 
 	SetUpHUD();
 }
@@ -347,47 +376,44 @@ void AGameOff2024Character::SwapToolBottle(const FInputActionValue& Value)
 
 void AGameOff2024Character::SwapLightSource(const FInputActionValue& Value)
 {
+	LightSourceOn = true;
 	if (CurrentActiveLight)
 	{
 		CurrentActiveLight->SetActive(false);
-	}
 
-	if (CurrentActiveLight != Flashlight)
-	{
-		if (Flashlight)
+		if (Flashlight && CurrentActiveLight != Flashlight)
 		{
 			CurrentActiveLight = Flashlight;
 		}
-	}
-	else
-	{
-		if (Lighter)
+		else
 		{
-			CurrentActiveLight = Lighter;
+			if (Lighter)
+			{
+				CurrentActiveLight = Lighter;
+			}
 		}
+
+		CurrentActiveLight->SetActive(true);
 	}
-	CurrentActiveLight->SetActive(true);
 }
 
 void AGameOff2024Character::ToggleLight(const FInputActionValue& Value)
 {
+	LightSourceOn = !LightSourceOn;
 	if (CurrentActiveLight)
 	{
-		CurrentActiveLight->ToggleLight();
+		CurrentActiveLight->ToggleLight(LightSourceOn);
 	}
 }
 
 void AGameOff2024Character::ChargeLight(const FInputActionValue& Value)
 {
-	if (!Flashlight)
+	if (!Flashlight && CurrentActiveLight != Flashlight)
 	{
 		return;
 	}
 
-	if (CurrentActiveLight != Flashlight)
-	{
-		return;
-	}
+	LightSourceOn = true;
 }
 
 void AGameOff2024Character::Aim(const FInputActionValue& Value)
@@ -397,7 +423,10 @@ void AGameOff2024Character::Aim(const FInputActionValue& Value)
 
 void AGameOff2024Character::UseTool(const FInputActionValue& Value)
 {
-	CurrentActiveTool->UseTool();
+	if (CurrentActiveTool)
+	{
+		CurrentActiveTool->UseTool();
+	}
 }
 
 void AGameOff2024Character::ReloadWeapon(const FInputActionValue& Value)
