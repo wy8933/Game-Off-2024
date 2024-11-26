@@ -59,7 +59,7 @@ void AInteractableActor::Interact(AGameOff2024Character* interactor)
 	InteractBP();
 	if (bDestroyOnInteract) {
 		DisableInteractPrompt();
-		Destroy();
+		//Destroy();
 	}
 }
 
