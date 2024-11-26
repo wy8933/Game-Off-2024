@@ -6,14 +6,14 @@
 
 void AHealthPickup::Interact(AGameOff2024Character* Interactor)
 {
-    //bool canRestore = false;
-    // Call the parent class's Interact to trigger InteractBP
-    Super::Interact(Interactor);
+	//bool canRestore = false;
 
-    // Custom logic for the health pickup
-    UInventory* inventory = Interactor->Inventory;
-    if (inventory->TryAddHealthItem())
-    {
-        Destroy();
-    }
+	//canRestore = Interactor -> TryRestoreHealth(HealthRestoreAmount);
+
+	UInventory* inventory = Interactor->Inventory;
+
+	if (inventory->TryAddHealthItem())
+	{
+		Destroy();
+	}
 }
