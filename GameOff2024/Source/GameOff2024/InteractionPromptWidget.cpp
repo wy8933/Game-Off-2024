@@ -24,6 +24,6 @@ void UInteractionPromptWidget::SetPromptText()
 {
 	FFormatNamedArguments Args;
 	Args.Add(TEXT("InteractType"), InteractionType);
-	FText prompt = FText::Format(LOCTEXT("InteractPrompt", "Press 'E' to {InteractType}"), Args);
+	FText prompt = FText::Format(LOCTEXT("InteractPrompt", "E: {InteractType}"), Args);
 	InteractText->SetText(prompt);
 }
