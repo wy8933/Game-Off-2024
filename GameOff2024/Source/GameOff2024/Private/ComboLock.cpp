@@ -6,19 +6,7 @@
 // Sets default values
 AComboLock::AComboLock()
 {
-	// Enable ticking
-	PrimaryActorTick.bCanEverTick = false;
-
-	// Set the default current number to 0
 	CurrentNumber = 0;
-
-	// Create a Text Render Component for displaying the current number
-	NumberDisplay = CreateDefaultSubobject<UTextRenderComponent>(TEXT("NumberDisplay"));
-	NumberDisplay->SetupAttachment(RootComponent);
-	NumberDisplay->SetHorizontalAlignment(EHTA_Center);
-	NumberDisplay->SetText(FText::FromString(TEXT("0")));
-	NumberDisplay->SetWorldSize(50.0f);
-	NumberDisplay->SetRelativeLocation(FVector(0.0f, 0.0f, 50.0f));
 }
 
 // Called when the game starts or when spawned
@@ -35,6 +23,17 @@ void AComboLock::Interact(AGameOff2024Character* interactor)
 {
 	// Rotate the lock dial
 	RotateLock();
+
+	if (NumberDisplay)
+	{
+	}
+	else
+	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("NumberDisplay is not assigned!"));
+		}
+	}
 }
 
 // Rotate the dial to the next number
@@ -77,7 +76,6 @@ void AComboLock::UpdateNumberDisplay()
 {
 	if (NumberDisplay)
 	{
-		// Update the displayed text
 		NumberDisplay->SetText(FText::AsNumber(CurrentNumber));
 	}
 }

@@ -36,11 +36,10 @@ protected:
 	int32 CurrentNumber;
 
 	// The maximum number the dial can reach before looping back to 0
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Combo Lock")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Combo Lock")
 	int32 MaxNumber = 9;
 
-	// Optional: Text Render Component to display the current number visually
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Combo Lock")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combo Lock")
 	class UTextRenderComponent* NumberDisplay;
 
 	// Sound to play when the dial is rotated
