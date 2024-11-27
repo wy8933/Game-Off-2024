@@ -27,6 +27,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Combo Lock")
 	int32 GetCurrentNumber() const;
 
+	// The Manager of the locks
+	UFUNCTION(BlueprintCallable, Category = "Combo Lock")
+	void SetComboLockManager(AComboLockManager* Manager);
+
+	UPROPERTY()
+	AComboLockManager* ComboLockManager;
 protected:
 	// Called when the game starts or the actor is spawned
 	virtual void BeginPlay() override;

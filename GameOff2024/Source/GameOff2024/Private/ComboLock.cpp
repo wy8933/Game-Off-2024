@@ -1,4 +1,5 @@
 #include "ComboLock.h"
+#include "ComboLockManager.h"
 #include "Components/TextRenderComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Engine/Engine.h"
@@ -24,10 +25,7 @@ void AComboLock::Interact(AGameOff2024Character* interactor)
 	// Rotate the lock dial
 	RotateLock();
 
-	if (NumberDisplay)
-	{
-	}
-	else
+	if (!NumberDisplay)
 	{
 		if (GEngine)
 		{
@@ -57,6 +55,12 @@ void AComboLock::RotateLock()
 	// Update the number display
 	UpdateNumberDisplay();
 
+	// Notify the manager to check the combination
+	if (ComboLockManager)
+	{
+		ComboLockManager->CheckCombination();
+	}
+
 	// Print debug message for testing
 	if (GEngine)
 	{
@@ -77,5 +81,25 @@ void AComboLock::UpdateNumberDisplay()
 	if (NumberDisplay)
 	{
 		NumberDisplay->SetText(FText::AsNumber(CurrentNumber));
+	}
+}
+
+void AComboLock::SetComboLockManager(AComboLockManager* Manager)
+{
+	if (Manager)
+	{
+		ComboLockManager = Manager;
+
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("ComboLockManager set successfully!"));
+		}
+	}
+	else
+	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Failed to set ComboLockManager!"));
+		}
 	}
 }
