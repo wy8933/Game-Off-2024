@@ -22,7 +22,7 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combo Lock Manager")
     TArray<AComboLock*> Locks;
 
-    // The correct combination
+    // The correct password combination
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combo Lock Manager")
     TArray<int32> CorrectCombination;
 

@@ -4,13 +4,11 @@
 #include "Kismet/GameplayStatics.h"
 #include "Engine/Engine.h"
 
-// Sets default values
 AComboLock::AComboLock()
 {
 	CurrentNumber = 0;
 }
 
-// Called when the game starts or when spawned
 void AComboLock::BeginPlay()
 {
 	Super::BeginPlay();
@@ -61,12 +59,6 @@ void AComboLock::RotateLock()
 		ComboLockManager->CheckCombination();
 	}
 
-	// Print debug message for testing
-	if (GEngine)
-	{
-		FString DebugMessage = FString::Printf(TEXT("Current Number: %d"), CurrentNumber);
-		GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Green, DebugMessage);
-	}
 }
 
 // Get the current number of the dial
@@ -89,11 +81,6 @@ void AComboLock::SetComboLockManager(AComboLockManager* Manager)
 	if (Manager)
 	{
 		ComboLockManager = Manager;
-
-		if (GEngine)
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("ComboLockManager set successfully!"));
-		}
 	}
 	else
 	{

@@ -34,12 +34,6 @@ void AComboLockManager::AddLock(AComboLock* Lock)
 
         // Set the lock's manager 
         Lock->SetComboLockManager(this);
-
-        if (GEngine)
-        {
-            FString DebugMessage = FString::Printf(TEXT("Lock added: %s"), *Lock->GetName());
-            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, DebugMessage);
-        }
     }
 }
 
@@ -47,11 +41,14 @@ void AComboLockManager::CheckCombination()
 {
     if (Locks.Num() != CorrectCombination.Num())
     {
-        UE_LOG(LogTemp, Error, TEXT("Number of locks does not match the correct combination!"));
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "Lock num and combination num are not the same");
+        }
         return;
     }
 
-    bIsPasswordCorrect = true; // Assume the password is correct initially
+    bIsPasswordCorrect = true;
 
     for (int32 i = 0; i < Locks.Num(); i++)
     {
@@ -60,15 +57,5 @@ void AComboLockManager::CheckCombination()
             bIsPasswordCorrect = false; // If one lock is incorrect, the password is wrong
             break;
         }
-    }
-
-    // Debug message for the result
-    if (bIsPasswordCorrect)
-    {
-        UE_LOG(LogTemp, Log, TEXT("Password is correct!"));
-    }
-    else
-    {
-        UE_LOG(LogTemp, Log, TEXT("Password is incorrect."));
     }
 }
