@@ -5,8 +5,9 @@
 
 void AMagnifierPickup::Interact(AGameOff2024Character* Interactor)
 {
+	Super::Interact(Interactor);
 	UInventory* inventory = Interactor->Inventory;
 	inventory->HasMagnifier = true;
 
-	Destroy();
+	//Destroy();
 }

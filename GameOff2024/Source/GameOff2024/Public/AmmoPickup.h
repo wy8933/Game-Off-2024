@@ -26,6 +26,6 @@ public:
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	virtual void Interact(AGameOff2024Character* interactor) override;
+	virtual void Interact(AGameOff2024Character* Interactor) override;
 
 };

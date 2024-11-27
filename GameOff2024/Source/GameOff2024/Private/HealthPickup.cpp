@@ -9,11 +9,12 @@ void AHealthPickup::Interact(AGameOff2024Character* Interactor)
 	//bool canRestore = false;
 
 	//canRestore = Interactor -> TryRestoreHealth(HealthRestoreAmount);
-
+	
 	UInventory* inventory = Interactor->Inventory;
 
 	if (inventory->TryAddHealthItem())
 	{
-		Destroy();
+		Super::Interact(Interactor);
+		//Destroy();
 	}
 }
