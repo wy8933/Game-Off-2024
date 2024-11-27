@@ -46,6 +46,7 @@ void AToolActor::SetActive(bool active)
 	//SetActorHiddenInGame(active);
 	SetActorTickEnabled(active);
 	VisualMesh->SetVisibility(active);
+	OnToggleActive(active);
 	//VisualMesh->bHiddenInGame = active;
 	//Visible
 }
