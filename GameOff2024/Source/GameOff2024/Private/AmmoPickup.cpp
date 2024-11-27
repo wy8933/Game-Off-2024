@@ -27,14 +27,16 @@ void AAmmoPickup::Tick(float DeltaTime)
 
 }
 
-void AAmmoPickup::Interact(AGameOff2024Character* interactor)
+void AAmmoPickup::Interact(AGameOff2024Character* Interactor)
 {
-	UInventory* inventory = interactor->Inventory;
+	
+	UInventory* inventory = Interactor->Inventory;
 	AmmoAmount = inventory->TryAddAmmo(AmmoAmount);
 
 	if (AmmoAmount <= 0)
 	{
-		Destroy();
+		Super::Interact(Interactor);
+		//Destroy();
 	}
 }
 

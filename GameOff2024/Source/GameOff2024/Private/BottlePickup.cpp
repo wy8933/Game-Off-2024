@@ -5,10 +5,12 @@
 
 void ABottlePickup::Interact(AGameOff2024Character* Interactor)
 {
+	
 	UInventory* inventory = Interactor->Inventory;
 
 	if (inventory->TryAddBottleItem())
 	{
-		Destroy();
+		Super::Interact(Interactor);
+		//Destroy();
 	}
 }
