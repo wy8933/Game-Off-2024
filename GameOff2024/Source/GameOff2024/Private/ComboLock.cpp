@@ -1,15 +1,14 @@
 #include "ComboLock.h"
+#include "ComboLockManager.h"
 #include "Components/TextRenderComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Engine/Engine.h"
 
-// Sets default values
 AComboLock::AComboLock()
 {
 	CurrentNumber = 0;
 }
 
-// Called when the game starts or when spawned
 void AComboLock::BeginPlay()
 {
 	Super::BeginPlay();
@@ -24,10 +23,7 @@ void AComboLock::Interact(AGameOff2024Character* interactor)
 	// Rotate the lock dial
 	RotateLock();
 
-	if (NumberDisplay)
-	{
-	}
-	else
+	if (!NumberDisplay)
 	{
 		if (GEngine)
 		{
@@ -57,12 +53,12 @@ void AComboLock::RotateLock()
 	// Update the number display
 	UpdateNumberDisplay();
 
-	// Print debug message for testing
-	if (GEngine)
+	// Notify the manager to check the combination
+	if (ComboLockManager)
 	{
-		FString DebugMessage = FString::Printf(TEXT("Current Number: %d"), CurrentNumber);
-		GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Green, DebugMessage);
+		ComboLockManager->CheckCombination();
 	}
+
 }
 
 // Get the current number of the dial
@@ -77,5 +73,20 @@ void AComboLock::UpdateNumberDisplay()
 	if (NumberDisplay)
 	{
 		NumberDisplay->SetText(FText::AsNumber(CurrentNumber));
+	}
+}
+
+void AComboLock::SetComboLockManager(AComboLockManager* Manager)
+{
+	if (Manager)
+	{
+		ComboLockManager = Manager;
+	}
+	else
+	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Failed to set ComboLockManager!"));
+		}
 	}
 }
