@@ -127,13 +127,13 @@ protected:
 	AToolActor* CurrentActiveTool;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tools")
-	AToolActor* Gun;
+	AGunToolActor* Gun;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tools")
-	AToolActor* Magnifier;
+	AMagnifierToolActor* Magnifier;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tools")
-	AToolActor* Bottle;
+	ABottleToolActor* Bottle;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Light Sources")
 	APlayerLight* CurrentActiveLight;

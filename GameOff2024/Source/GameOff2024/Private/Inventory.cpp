@@ -94,3 +94,17 @@ bool UInventory::TryReloadWeapon()
 
 	return true;
 }
+
+bool UInventory::TryUseWeapon()
+{
+	if (AmmoInClip <= 0)
+	{
+		return false;
+	}
+
+	AmmoInClip -= 1;
+
+	OnAmmoChanged.Broadcast(CurrentAmmo, AmmoClipSize, AmmoInClip);
+
+	return true;
+}
