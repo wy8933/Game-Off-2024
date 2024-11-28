@@ -1,5 +1,6 @@
-#include "ComboLock.h"
+
 #include "ComboLockManager.h"
+#include "ComboLock.h"
 #include "Kismet/GameplayStatics.h"
 
 AComboLockManager::AComboLockManager()

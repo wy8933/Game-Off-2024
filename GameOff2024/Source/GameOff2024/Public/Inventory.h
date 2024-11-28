@@ -53,6 +53,7 @@ public:
 	bool TryRemoveHealthItem();
 	bool TryAddBottleItem();
 	bool TryReloadWeapon();
+	bool TryUseWeapon();
 
 	UPROPERTY(BlueprintAssignable)
 	FOnAmmoChanged OnAmmoChanged;
