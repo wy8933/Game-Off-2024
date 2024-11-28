@@ -25,8 +25,6 @@ void UHitboxComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-
-	HitboxMesh->SetVisibility(false);
 }
 
 
