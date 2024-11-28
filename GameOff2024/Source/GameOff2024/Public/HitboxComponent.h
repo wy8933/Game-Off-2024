@@ -16,9 +16,6 @@ class GAMEOFF2024_API UHitboxComponent : public UBoxComponent
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere)
-	UStaticMeshComponent* HitboxMesh;
-
 public:	
 	// Sets default values for this component's properties
 	UHitboxComponent();
