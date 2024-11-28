@@ -20,7 +20,6 @@ void AComboLock::BeginPlay()
 // Called when the player interacts with this lock
 void AComboLock::Interact(AGameOff2024Character* interactor)
 {
-	Super::Interact(interactor);
 	// Rotate the lock dial
 	RotateLock();
 
@@ -31,6 +30,8 @@ void AComboLock::Interact(AGameOff2024Character* interactor)
 			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("NumberDisplay is not assigned!"));
 		}
 	}
+
+	Super::Interact(interactor);
 }
 
 // Rotate the dial to the next number
