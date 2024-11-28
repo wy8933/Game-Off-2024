@@ -36,10 +36,10 @@ void UHitboxComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	// ...
 }
 
-void UHitboxComponent::TakeDamage()
+void UHitboxComponent::TakeDamage(FVector impactPoint)
 {
 	if (OnTakeHit.IsBound())
 	{
-		OnTakeHit.Broadcast(damageOnHit);
+		OnTakeHit.Broadcast(impactPoint);
 	}
 }

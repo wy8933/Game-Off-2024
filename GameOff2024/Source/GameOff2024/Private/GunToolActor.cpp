@@ -43,7 +43,7 @@ void AGunToolActor::UseTool()
 		{
 			Hitbox = (UHitboxComponent*)actor;
 
-			Hitbox->TakeDamage();
+			Hitbox->TakeDamage(RV_Hit.ImpactPoint);
 		}
 	}
 
