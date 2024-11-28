@@ -20,6 +20,7 @@ void AComboLock::BeginPlay()
 // Called when the player interacts with this lock
 void AComboLock::Interact(AGameOff2024Character* interactor)
 {
+	Super::Interact(interactor);
 	// Rotate the lock dial
 	RotateLock();
 
