@@ -8,6 +8,9 @@
 #include "AmmoHUDWidget.h"
 #include "HealthHUDWidget.h"
 #include "BottlesHUDWidget.h"
+#include "GunToolActor.h"
+#include "BottleToolActor.h"
+#include "MagnifierToolActor.h"
 #include "ToolActor.h"
 #include "PlayerLight.h"
 #include "GameOff2024Character.generated.h"
@@ -127,13 +130,13 @@ protected:
 	AToolActor* CurrentActiveTool;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tools")
-	AToolActor* Gun;
+	AGunToolActor* Gun;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tools")
-	AToolActor* Magnifier;
+	AMagnifierToolActor* Magnifier;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tools")
-	AToolActor* Bottle;
+	ABottleToolActor* Bottle;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Light Sources")
 	APlayerLight* CurrentActiveLight;

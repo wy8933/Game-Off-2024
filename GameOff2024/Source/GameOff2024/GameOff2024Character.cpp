@@ -74,6 +74,7 @@ void AGameOff2024Character::BeginPlay()
 		{
 			Gun = Cast<AGunToolActor>(children[i]);
 			Gun->SetActive(false);
+			Gun->Inventory = Inventory;
 		}
 	}
 
@@ -436,7 +437,8 @@ void AGameOff2024Character::ReloadWeapon(const FInputActionValue& Value)
 		return;
 	}
 
-	Inventory->TryReloadWeapon();
+	Gun->Reload();
+	//Inventory->TryReloadWeapon();
 }
 
 void AGameOff2024Character::Tick(float DeltaTime)

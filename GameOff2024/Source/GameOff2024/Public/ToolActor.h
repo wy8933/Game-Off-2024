@@ -31,4 +31,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SetActive(bool active);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnToggleActive(bool active);
 };
