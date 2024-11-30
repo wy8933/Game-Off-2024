@@ -5,6 +5,11 @@
 
 void AGunToolActor::UseTool()
 {
+	if (!Inventory)
+	{
+		return;
+	}
+
 	if (Inventory->TryUseWeapon() == false)
 	{
 		return;
@@ -55,6 +60,11 @@ void AGunToolActor::UseTool()
 
 void AGunToolActor::Reload()
 {
+	if (!Inventory)
+	{
+		return;
+	}
+
 	if (Inventory->TryReloadWeapon())
 	{
 		if (OnWeaponReloaded.IsBound())

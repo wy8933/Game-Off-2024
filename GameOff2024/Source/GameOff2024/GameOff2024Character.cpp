@@ -318,6 +318,11 @@ void AGameOff2024Character::SwapToolGun(const FInputActionValue& Value)
 		return;
 	}
 
+	if (!Gun->Inventory)
+	{
+		Gun->Inventory = Inventory;
+	}
+
 	if (CurrentActiveTool != Gun)
 	{
 		if (CurrentActiveTool)
