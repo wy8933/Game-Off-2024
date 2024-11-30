@@ -31,6 +31,7 @@ public:
 	virtual void UseTool() override;
 	virtual void Reload();
 
+	UPROPERTY();
 	UInventory* Inventory;
 
 	UPROPERTY(BlueprintAssignable)
