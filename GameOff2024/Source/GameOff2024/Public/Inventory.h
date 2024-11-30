@@ -23,23 +23,23 @@ class GAMEOFF2024_API UInventory : public UObject
 
 public:
 	//Ammo
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Inventory")
 	int CurrentAmmo = 0;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory")
 	int AmmoClipSize = 6;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory")
 	int MaxAmmo = 18;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Inventory")
 	int AmmoInClip = 0;
 
 	//Health
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Inventory")
 	int HealthItemsCarried = 0;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory")
 	int MaxHealthItems = 3;
 
 	//Bottles
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Inventory")
 	int BottlesCarried = 0;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory")
 	int MaxBottles = 3;

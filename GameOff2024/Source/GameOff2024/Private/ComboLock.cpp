@@ -30,6 +30,8 @@ void AComboLock::Interact(AGameOff2024Character* interactor)
 			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("NumberDisplay is not assigned!"));
 		}
 	}
+
+	Super::Interact(interactor);
 }
 
 // Rotate the dial to the next number
