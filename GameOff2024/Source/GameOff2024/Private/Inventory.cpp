@@ -101,10 +101,16 @@ bool UInventory::TryUseWeapon()
 	{
 		return false;
 	}
+	
 
 	AmmoInClip -= 1;
+	CurrentAmmo -= 1;
 
-	OnAmmoChanged.Broadcast(CurrentAmmo, AmmoClipSize, AmmoInClip);
-
+	if (OnAmmoChanged.IsBound())
+	{
+		OnAmmoChanged.Broadcast(CurrentAmmo, AmmoClipSize, AmmoInClip);
+	}
+	
 	return true;
+	
 }
