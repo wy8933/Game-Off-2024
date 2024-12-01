@@ -5,5 +5,5 @@
 
 void ABottleToolActor::UseTool()
 {
-	
+	ThrowBottle();
 }

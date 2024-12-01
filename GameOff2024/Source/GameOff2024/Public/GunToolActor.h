@@ -31,6 +31,12 @@ public:
 	virtual void UseTool() override;
 	virtual void Reload();
 
+	UFUNCTION(BlueprintImplementableEvent)
+		void ShootGun();
+
+	UFUNCTION(BlueprintImplementableEvent)
+		void ReloadGun();
+
 	UPROPERTY();
 	UInventory* Inventory;
 

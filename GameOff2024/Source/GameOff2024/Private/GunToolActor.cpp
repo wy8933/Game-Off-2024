@@ -56,6 +56,7 @@ void AGunToolActor::UseTool()
 	{
 		OnWeaponFired.Broadcast();
 	}
+	ShootGun();
 }
 
 void AGunToolActor::Reload()
@@ -72,4 +73,6 @@ void AGunToolActor::Reload()
 			OnWeaponReloaded.Broadcast();
 		}
 	}
+
+	ReloadGun();
 }

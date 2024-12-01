@@ -17,4 +17,7 @@ class GAMEOFF2024_API ABottleToolActor : public AToolActor
 
 public:
 	virtual void UseTool() override;
+
+	UFUNCTION(BlueprintImplementableEvent)
+		void ThrowBottle();
 };

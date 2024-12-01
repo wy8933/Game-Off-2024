@@ -14,4 +14,11 @@ class GAMEOFF2024_API AMagnifierToolActor : public AToolActor
 {
 	GENERATED_BODY()
 	
+public:
+
+	virtual void UseTool() override;
+
+	UFUNCTION(BlueprintImplementableEvent)
+		void Magnify();
+
 };

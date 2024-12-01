@@ -3,3 +3,7 @@
 
 #include "MagnifierToolActor.h"
 
+void AMagnifierToolActor::UseTool()
+{
+	Magnify();
+}
