@@ -18,7 +18,7 @@ class GAMEOFF2024_API UAmmoHUDWidget : public UUserWidget
 public:
 	virtual void NativeConstruct() override;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void UpdateHUD(int CurrentAmmo, int ClipSize, int AmmoInClip);
 
 private:

@@ -156,8 +156,13 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = Inventory)
 	class UInventory* Inventory;
 
+	UPROPERTY(BlueprintReadOnly, Category = HUD)
 	class UAmmoHUDWidget* AmmoHUD;
+
+	UPROPERTY(BlueprintReadOnly, Category = HUD)
 	class UHealthHUDWidget* HealthHUD;
+
+	UPROPERTY(BlueprintReadOnly, Category = HUD)
 	class UBottlesHUDWidget* BottlesHUD;
 
 protected:

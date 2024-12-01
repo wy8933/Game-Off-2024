@@ -20,6 +20,6 @@ private:
 
 public:
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void UpdateHUD(int BottlesCarried);
 };
