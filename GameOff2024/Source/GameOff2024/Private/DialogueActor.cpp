@@ -49,7 +49,11 @@ void ADialogueActor::Interact(AGameOff2024Character* interactor)
 
     if (DialogueDataTable && DialogueWidgetInstance)
     {
-        StartDialogue();
+        // Start the dialogue only if it's not already active
+        if (!bIsDialogueActive)
+        {
+            StartDialogue();
+        }
     }
 }
 
@@ -58,8 +62,15 @@ void ADialogueActor::Interact(AGameOff2024Character* interactor)
 /// </summary>
 void ADialogueActor::StartDialogue()
 {
+    // Reset state and begin dialogue
     bIsDialogueActive = true;
     CurrentNodeID = 0;
+
+    if (DialogueAudioComponent && DialogueAudioComponent->IsPlaying())
+    {
+        DialogueAudioComponent->Stop(); // Stop any audio still playing
+    }
+
     DisplayCurrentNode();
 }
 
@@ -86,10 +97,9 @@ void ADialogueActor::DisplayCurrentNode()
     }
     else
     {
-        OnDialogueAudioFinished();
+        OnDialogueAudioFinished(); // Automatically progress if no audio
     }
 }
-
 
 /// <summary>
 /// Get the current node for Dialogue
@@ -147,7 +157,10 @@ void ADialogueActor::ProgressToNextNode()
 
 void ADialogueActor::OnDialogueAudioFinished()
 {
-    ProgressToNextNode();
+    if (bIsDialogueActive)
+    {
+        ProgressToNextNode();
+    }
 }
 
 /// <summary>
@@ -160,10 +173,4 @@ void ADialogueActor::EndDialogue()
         DialogueWidgetInstance->SetVisibility(ESlateVisibility::Hidden);
     }
     bIsDialogueActive = false;
-
-    // Unbind the delegate to avoid calling it after the dialogue ends
-    if (DialogueAudioComponent)
-    {
-        DialogueAudioComponent->OnAudioFinished.RemoveDynamic(this, &ADialogueActor::OnDialogueAudioFinished);
-    }
 }
