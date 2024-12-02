@@ -5,6 +5,7 @@
 #include "Blueprint/UserWidget.h"
 #include "Components/AudioComponent.h"
 
+
 ADialogueActor::ADialogueActor()
 {
     // Set default values
@@ -17,6 +18,7 @@ ADialogueActor::ADialogueActor()
     DialogueAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("DialogueAudioComponent"));
     DialogueAudioComponent->bAutoActivate = false; // Do not auto-play
     DialogueAudioComponent->OnAudioFinished.AddDynamic(this, &ADialogueActor::OnDialogueAudioFinished);
+
 }
 
 void ADialogueActor::BeginPlay()
@@ -72,6 +74,7 @@ void ADialogueActor::StartDialogue()
     }
 
     DisplayCurrentNode();
+
 }
 
 /// <summary>
@@ -157,6 +160,11 @@ void ADialogueActor::ProgressToNextNode()
 
 void ADialogueActor::OnDialogueAudioFinished()
 {
+    if (GEngine)
+    {
+        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Dialogue Node Audio Finished"));
+    }
+
     if (bIsDialogueActive)
     {
         ProgressToNextNode();
@@ -168,9 +176,15 @@ void ADialogueActor::OnDialogueAudioFinished()
 /// </summary>
 void ADialogueActor::EndDialogue()
 {
+    if (GEngine)
+    {
+        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Ending Dialogue"));
+    }
+
     if (DialogueWidgetInstance)
     {
         DialogueWidgetInstance->SetVisibility(ESlateVisibility::Hidden);
     }
     bIsDialogueActive = false;
+
 }
