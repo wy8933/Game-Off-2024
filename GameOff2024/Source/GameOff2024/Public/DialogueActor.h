@@ -7,6 +7,10 @@
 #include "Dialogue.h"
 #include "DialogueActor.generated.h"
 
+
+/// <summary>
+/// The Interactable Actor for Audio Logs
+/// </summary>
 UCLASS()
 class GAMEOFF2024_API ADialogueActor : public AInteractableActor
 {
@@ -55,4 +59,6 @@ private:
     // Callback for when dialogue audio finishes
     UFUNCTION()
     void OnDialogueAudioFinished();
+
+
 };

@@ -34,7 +34,11 @@ public:
 
 	UPROPERTY(EditAnywhere)
 		bool bDestroyOnInteract = true;
-	
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Interaction)
+		bool bCanBeInteractedWith = true;
+
+
 	UFUNCTION(BlueprintImplementableEvent)
 		void InteractBP();
 
@@ -46,4 +50,9 @@ public:
 	virtual void Interact(AGameOff2024Character* interactor);
 	virtual void EnableInteractPrompt();
 	virtual void DisableInteractPrompt();
+
+	UFUNCTION(BlueprintCallable)
+	void EnableInteraction();
+	UFUNCTION(BlueprintCallable)
+	void DisableInteraction();
 };

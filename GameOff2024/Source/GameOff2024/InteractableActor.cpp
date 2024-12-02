@@ -56,6 +56,11 @@ void AInteractableActor::SetWidgetPromptText()
 
 void AInteractableActor::Interact(AGameOff2024Character* interactor)
 {
+	if(bCanBeInteractedWith == false)
+	{
+		return;
+	}
+
 	InteractBP();
 	if (bDestroyOnInteract) {
 		DisableInteractPrompt();
@@ -67,7 +72,10 @@ void AInteractableActor::EnableInteractPrompt()
 {
 	if (InteractPrompt)
 	{
-		InteractPrompt->SetVisibility(ESlateVisibility::Visible);
+		if (bCanBeInteractedWith == true)
+		{
+			InteractPrompt->SetVisibility(ESlateVisibility::Visible);
+		}
 	}
 }
 
@@ -77,4 +85,14 @@ void AInteractableActor::DisableInteractPrompt()
 	{
 		InteractPrompt->SetVisibility(ESlateVisibility::Hidden);
 	}
+}
+
+void AInteractableActor::EnableInteraction()
+{
+	bCanBeInteractedWith = true;
+}
+
+void AInteractableActor::DisableInteraction()
+{
+	bCanBeInteractedWith = false;
 }
