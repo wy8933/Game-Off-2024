@@ -117,11 +117,6 @@ void ADialogueSystemManager::EndDialogue()
     }
     CurrentNodeID = 0;
     DialogueDataTable = nullptr;
-
-    if (GEngine)
-    {
-        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Dialogue ended!"));
-    }
 }
 
 void ADialogueSystemManager::OnDialogueAudioFinished()

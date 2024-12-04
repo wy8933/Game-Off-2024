@@ -5,9 +5,6 @@
 #include "../InteractableActor.h"
 #include "DialogueActor.generated.h"
 
-/**
- * DialogueActor triggers dialogue interactions and passes control to the DialogueSystemManager.
- */
 UCLASS()
 class GAMEOFF2024_API ADialogueActor : public AInteractableActor
 {
@@ -22,11 +19,11 @@ public:
 protected:
     virtual void BeginPlay() override;
 
-    // Reference to the Dialogue System Manager
+    // Dialogue System Manager
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue", meta = (ExposeOnSpawn = "true"))
     ADialogueSystemManager* DialogueSystemManager;
      
-    // Reference to the DataTable containing dialogue nodes
+    //DataTable containing dialogue nodes
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
     UDataTable* DialogueDataTable;
 

@@ -37,7 +37,7 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Dialogue")
     FDialogueNode GetCurrentDialogueNode();
 
-    // Progresses to the next node
+    // Progress to the next node
     UFUNCTION(BlueprintCallable, Category = "Dialogue")
     void ProgressToNextNode();
 
