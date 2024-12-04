@@ -22,9 +22,10 @@ void UAmmoHUDWidget::UpdateHUD(int CurrentAmmo, int ClipSize, int AmmoInClip)
 	Args.Add(TEXT("ClipSize"), ClipSize);
 	Args.Add(TEXT("ExtraAmmo"), ExtraAmmo);
 
-	FText AmmoClipText = FText::Format(LOCTEXT("AmmoDisplay", "{AmmoInClip}/{ClipSize}"), Args);
+	//FText AmmoClipText = FText::Format(LOCTEXT("AmmoDisplay", "{AmmoInClip}/{ClipSize}"), Args);
+	FText AmmoClipText = FText::Format(LOCTEXT("AmmoDisplay", "{AmmoInClip}"), Args);
 	AmmoClipDisplayText->SetText(AmmoClipText);
 
-	FText ExtraAmmoText = FText::Format(LOCTEXT("AmmoDisplay", "{ExtraAmmo}"), Args);
+	FText ExtraAmmoText = FText::Format(LOCTEXT("AmmoDisplay", "/{ExtraAmmo}"), Args);
 	ExtraAmmoDisplayText->SetText(ExtraAmmoText);
 }
