@@ -494,18 +494,19 @@ void AGameOff2024Character::GetInteractableTarget()
 	if (targetInteractable != interactableActor)
 	{
 
-		if (targetInteractable != nullptr)
+		if (targetInteractable != nullptr && targetInteractable->InteractPrompt->GetVisibility() == ESlateVisibility::Visible)
 		{
 			//disable previous interaction prompt
 			targetInteractable->DisableInteractPrompt();
 		}
 
 		targetInteractable = interactableActor;
+	}
 
-		if (targetInteractable != nullptr)
-		{
+	if (targetInteractable != nullptr)
+	{
+		if (targetInteractable->bCanBeInteractedWith == true && targetInteractable->InteractPrompt->GetVisibility() != ESlateVisibility::Visible)
 			//enable new interaction prompt
 			targetInteractable->EnableInteractPrompt();
-		}
 	}
 }
