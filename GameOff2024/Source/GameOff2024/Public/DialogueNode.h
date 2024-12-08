@@ -12,6 +12,9 @@ struct FDialogueNode: public FTableRowBase
     FText DialogueText;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    FText ChineseText;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
     int32 NextNodeID;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
