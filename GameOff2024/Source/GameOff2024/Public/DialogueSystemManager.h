@@ -5,6 +5,13 @@
 #include "Components/AudioComponent.h"
 #include "DialogueSystemManager.generated.h"
 
+UENUM(BlueprintType)
+enum class EDialogueLanguage : uint8
+{
+    English UMETA(DisplayName = "English"),
+    Chinese UMETA(DisplayName = "Chinese")
+};
+
 UCLASS(Blueprintable)
 class GAMEOFF2024_API ADialogueSystemManager : public AActor
 {
@@ -44,6 +51,18 @@ public:
     // Ends the dialogue
     UFUNCTION(BlueprintCallable, Category = "Dialogue")
     void EndDialogue();
+
+    // The current language 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
+    EDialogueLanguage CurrentLanguage;
+
+    // Sets the language for the dialogue system
+    UFUNCTION(BlueprintCallable, Category = "Dialogue")
+    void SetLanguage(EDialogueLanguage NewLanguage);
+
+    // Get the dialogue with current language
+    UFUNCTION(BlueprintCallable, Category = "Dialogue")
+    FText GetLocalizedText(const FDialogueNode& Node);
 
 private:
     // Handles displaying the current dialogue node

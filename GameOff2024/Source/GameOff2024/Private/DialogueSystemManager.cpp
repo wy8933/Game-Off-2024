@@ -68,26 +68,18 @@ FDialogueNode ADialogueSystemManager::GetCurrentDialogueNode()
 void ADialogueSystemManager::DisplayCurrentNode()
 {
     FDialogueNode CurrentNode = GetCurrentDialogueNode();
+    FText LocalizedText = GetLocalizedText(CurrentNode);
 
-    // Update the dialogue widget
     if (DialogueWidgetInstance)
     {
-        DialogueWidgetInstance->UpdateDialogue(CurrentNode.SpeakerName, CurrentNode.DialogueText);
+        DialogueWidgetInstance->UpdateDialogue(CurrentNode.SpeakerName, LocalizedText);
     }
 
-    // Play the audio for the current node
+    // Play the audio for the current dialogue
     if (CurrentNode.DialogueAudio && DialogueAudioComponent)
     {
         DialogueAudioComponent->SetSound(CurrentNode.DialogueAudio);
         DialogueAudioComponent->Play();
-    }
-    else
-    {
-        if (GEngine)
-        {
-            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("No audio found for the current node!"));
-        }
-        OnDialogueAudioFinished();
     }
 }
 
@@ -122,4 +114,38 @@ void ADialogueSystemManager::EndDialogue()
 void ADialogueSystemManager::OnDialogueAudioFinished()
 {
     ProgressToNextNode();
+}
+
+void ADialogueSystemManager::SetLanguage(EDialogueLanguage NewLanguage)
+{
+    CurrentLanguage = NewLanguage;
+
+    // Map enum to culture strings
+    FString Culture;
+    switch (CurrentLanguage)
+    {
+    case EDialogueLanguage::English:
+        Culture = TEXT("en");
+        break;
+    case EDialogueLanguage::Chinese:
+        Culture = TEXT("cn");
+        break;
+    default:
+        Culture = TEXT("en");
+        break;
+    }
+
+    // Change the culture
+    FInternationalization::Get().SetCurrentCulture(Culture);
+}
+
+FText ADialogueSystemManager::GetLocalizedText(const FDialogueNode& Node)
+{
+    switch (CurrentLanguage)
+    {
+    case EDialogueLanguage::Chinese:
+        return Node.ChineseText;
+    default:
+        return Node.DialogueText;
+    }
 }
