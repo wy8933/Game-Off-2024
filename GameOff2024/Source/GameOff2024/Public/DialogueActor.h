@@ -30,4 +30,7 @@ protected:
     // The ID of the starting dialogue node
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
     int32 StartingNodeID = 0;
+
+    UFUNCTION(BlueprintCallable, Category = "Dialogue")
+    void StartDialogue();
 };

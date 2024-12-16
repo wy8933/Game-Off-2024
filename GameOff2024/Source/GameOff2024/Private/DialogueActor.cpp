@@ -13,6 +13,21 @@ void ADialogueActor::BeginPlay()
     Super::BeginPlay();
 }
 
+void ADialogueActor::StartDialogue()
+{
+    if (DialogueDataTable)
+    {
+        DialogueSystemManager->StartDialogue(DialogueDataTable, StartingNodeID);
+    }
+    else
+    {
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("DialogueDataTable is null!"));
+        }
+    }
+}
+
 void ADialogueActor::Interact(AGameOff2024Character* Interactor)
 {
     if (!DialogueSystemManager)
