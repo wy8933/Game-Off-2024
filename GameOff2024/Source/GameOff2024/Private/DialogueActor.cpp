@@ -11,12 +11,19 @@ ADialogueActor::ADialogueActor()
 void ADialogueActor::BeginPlay()
 {
     Super::BeginPlay();
+}
 
-    if (!DialogueSystemManager)
+void ADialogueActor::StartDialogue()
+{
+    if (DialogueDataTable)
+    {
+        DialogueSystemManager->StartDialogue(DialogueDataTable, StartingNodeID);
+    }
+    else
     {
         if (GEngine)
         {
-            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("DialogueSystemManager is not set in the DialogueActor!"));
+            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("DialogueDataTable is null!"));
         }
     }
 }
