@@ -12,7 +12,7 @@ void UDialogue::SetDialogueText(const FText& NewText)
 
 void UDialogue::UpdateDialogue(FText SpeakerName, FText DialogueText) {
 	// Format the dialogue to use rich text
-	FText FormattedText = FText::Format(FText::FromString("<Name>{0}</>: {1}"), SpeakerName, DialogueText);
+	FText FormattedText = FText::Format(FText::FromString("<Name>{0}</> {1}"), SpeakerName, DialogueText);
 	SetDialogueText(FormattedText);
 	if (GEngine)
 	{
